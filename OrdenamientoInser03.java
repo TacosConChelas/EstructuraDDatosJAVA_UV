@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Ordenamiento_Insercion03 {
+public class OrdenamientoInser03 {
     public static void resultado(String[] arr, int n) {
         for (int i=1; i<n; i++) {
             String key=arr[i];
