@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class OrdenamientoInser04 {
+public class OrdenamientoInser04_M {
     /* 
         Eliminar Duplicados en Arreglo Ordenado
         Implementa un programa que elimine los elementos duplicados en un arreglo ordenado utilizando el método de ordenamiento por inserción. 

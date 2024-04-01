@@ -3,7 +3,7 @@ import java.util.*;
     Adriel Xel Há Hernández Ortega      zS22015739
     Desarrolla un programa que ordene un arreglo de cadenas de texto utilizando el método de ordenamiento por inserción.
  */
-public class OrdenamientoInser03 {
+public class OrdenamientoInser03_M {
     public static void ordInsert02(String[] a){
         for (int i = 0; i < a.length; i++) {
             String key = a[i];

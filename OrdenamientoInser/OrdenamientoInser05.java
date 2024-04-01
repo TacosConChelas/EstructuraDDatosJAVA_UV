@@ -23,7 +23,7 @@ public class OrdenamientoInser05 {
             if (me > n[i]) {
                 me = n[i]; lugar = i;
             }   
-        } System.out.println("El numero mayor es: " + me + "\nEsta en la posicion: " + lugar);
+        } System.out.println("El numero menor es: " + me + "\nEsta en la posicion: " + lugar);
     }
     public static void main(String[] args) {
         Scanner tacoScanner = new Scanner(System.in);
