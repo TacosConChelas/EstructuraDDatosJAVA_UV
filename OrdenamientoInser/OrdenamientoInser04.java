@@ -1,5 +1,12 @@
 import java.util.*;
-
+/*  Integrantes:
+    Jiménez Ojeda Jesús Ignacio​
+    Erick Alexander Monfil Arroyo
+    Adriel Xel Há Hernández Ortega      zS22015739
+    Ejercicio 4: Eliminar Duplicados en Arreglo Ordenado
+    Implementa un programa que elimine los elementos duplicados en un arreglo ordenado utilizando el método de ordenamiento por inserción. 
+    El programa debe garantizar que el arreglo resultante permanezca ordenado.
+*/
 public class OrdenamientoInser04 {
     public static void resultado(int[] arr, int n) {
         for (int i = 1; i < n; i++) {
@@ -23,13 +30,11 @@ public class OrdenamientoInser04 {
             arr[i] = 0;
         }
     }
-
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
 
         System.out.print("Ingresa la cantidad de cadenas: ");
         int n = leer.nextInt();
-
         int[] arr = new int[n];
 
         System.out.println("Ingresa las cadenas en enteros:");
@@ -53,7 +58,6 @@ public class OrdenamientoInser04 {
             }
         }
         System.out.println("]");
-
         leer.close();
     }
 }

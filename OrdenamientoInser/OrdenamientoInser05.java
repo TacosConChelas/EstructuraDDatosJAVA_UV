@@ -1,5 +1,7 @@
 import java.util.*;
-/* 
+/*  Integrantes:
+    Jiménez Ojeda Jesús Ignacio​
+    Erick Alexander Monfil Arroyo
     Adriel Xel Há Hernández Ortega      zS22015739
     Encontrar el valor más pequeño en un arreglo.
     Crea un programa que encuentre el  elemento más pequeño en un arreglo de enteros utilizando el método de ordenamiento por inserción. 
@@ -38,7 +40,6 @@ public class OrdenamientoInser05 {
         System.out.println("Arreglo sin ordenar: \n" + Arrays.toString(nums));
         buscarMenor(nums);
         ordInsert(nums);
-
         tacoScanner.close();
     }
 }

@@ -1,5 +1,7 @@
 import java.util.*;
-/*
+/*  Integrantes:
+    Jiménez Ojeda Jesús Ignacio​
+    Erick Alexander Monfil Arroyo
     Adriel Xel Há Hernández Ortega      zS22015739
     Encontrar el valor más grande en un arreglo.
     Crea un programa que encuentre (mediante búsqueda secuencial) el  elemento más grande en un arreglo de enteros utilizando 

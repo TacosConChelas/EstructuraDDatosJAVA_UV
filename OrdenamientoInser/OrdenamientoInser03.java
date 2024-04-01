@@ -1,4 +1,10 @@
 import java.util.*;
+/*  Integrantes:
+    Jiménez Ojeda Jesús Ignacio​
+    Erick Alexander Monfil Arroyo
+    Adriel Xel Há Hernández Ortega      zS22015739
+    Ejercicio 3: Desarrolla un programa que ordene un arreglo de cadenas de texto utilizando el método de ordenamiento por inserción.
+ */
 
 public class OrdenamientoInser03 {
     public static void resultado(String[] arr, int n) {
