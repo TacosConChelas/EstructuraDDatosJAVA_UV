@@ -22,7 +22,6 @@ public class Quicksort03 {
 		int buffer = arr[elemento];
 		arr[elemento] = arr[indiceDer];
 		arr[indiceDer] = buffer;
-
 		return elemento;
 	}
     public static void ordenar(int arr[], int indiceIzq, int indiceDer) {
