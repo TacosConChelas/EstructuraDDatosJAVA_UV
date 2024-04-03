@@ -4,10 +4,10 @@ import java.util.*;
     Erick Alexander Monfil Arroyo
     Adriel Xel Há Hernández Ortega
     Introduce por teclado, el numero de elementos a ordenar, así como los elementos que estarán en tu arreglo (de forma desordenada), 
-    implementa el ordenamiento Quicksort, y termina imprimiendo ambos arreglos, el ordenado y el desordenado.
+    2.- Introduce un arreglo de 10 posiciones por teclado, mismo que se solicita imprimir y posteriormente ordenarlo mediante Quiksort. imprime el resultado.
 */
-public class Quicksort03 {
-    public static int ordenarSeccion(int arr[], int indiceIzq, int indiceDer) {
+public class Quicksort02 {
+    static int ordenarSeccion(int arr[], int indiceIzq, int indiceDer) {
 		int pivote = arr[indiceDer]; 
 		int elemento = (indiceIzq - 1);
 		for (int indice = indiceIzq; indice < indiceDer; indice++) {
@@ -41,7 +41,7 @@ public class Quicksort03 {
             nums[i] = leeScanner.nextInt();
         }
 
-        System.out.println("Arreglo original: " + Arrays.toString(nums));
+        
         ordenar(nums, 0, (nums.length - 1));
         System.out.println("Arreglo ordenado: " + Arrays.toString(nums));
         leeScanner.close();
