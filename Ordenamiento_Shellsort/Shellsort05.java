@@ -58,10 +58,12 @@ public class Shellsort05 {
             arreglo[i] = tScanner.nextInt();
         }
         System.out.println("Arreglo desordenado: \n" + Arrays.toString(arreglo));
+        ordenarShell(arreglo);
+        
         mayor = arreglo[arreglo.length - 1];
         System.out.println("Ahora buscamos el numero mayor");
         busquedaBinaria(arreglo, mayor);
+        
         tScanner.close();
-      
     }
 }

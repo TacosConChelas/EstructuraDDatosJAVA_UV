@@ -34,5 +34,6 @@ public class Shellsort02 {
         }
         System.out.println("Arreglo desordenado: \n" + Arrays.toString(arreglo));
         ordenarShell(arreglo);
+        tacoScanner.close();
     }
 }
