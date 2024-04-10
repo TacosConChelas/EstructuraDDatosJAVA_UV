@@ -7,7 +7,7 @@ import java.util.*;
     1.- Dado el siguiente arreglo  [4, 6, 1, 3, 9, 2, 7] , se solicita ordenarlos mediante Shellsort e imprimirlo.
 */
 public class Shellsort01 {
-    static void ordenarShell(int[] arreglo) {
+    public static void ordenarShell(int[] arreglo) {
 		int arreglo_size = arreglo.length;
 		int brecha = (arreglo_size/2);
 		

@@ -14,14 +14,12 @@ public class BusquedaBinaria2 {
             if (data[m] < b) {
                 inicio = m + 1;
                 if (inicio > f) {
-                    System.out.println("tu numero no se ha encontrado");
-                    break;
+                    System.out.println("tu numero no se ha encontrado");    break;
                 }
             } else if (data[m] > b) {
                 f = m -1;
                 if (inicio > f) {
-                    System.out.println("tu numero no se ha encontrado");
-                    break;
+                    System.out.println("tu numero no se ha encontrado");    break;
                 }
             } else {
                 System.out.println("tu numero esta en esta posicion: " + m);
@@ -29,6 +27,28 @@ public class BusquedaBinaria2 {
             }
         }
     }
+    public static void binario1(int[] arreglo, int valorABuscar){
+        int indiceInferior = 0, indiceSuperior = arreglo.length, indiceMedio = 0;
+        while (indiceInferior <= indiceSuperior) {
+            indiceMedio = (indiceSuperior - indiceInferior) / 2 + indiceInferior;
+            if (arreglo[indiceMedio] < valorABuscar) {
+                indiceInferior = indiceMedio + 1;
+                if (indiceInferior > indiceSuperior) {
+                    System.out.println("tu numero no se ha encontrado");    break;
+                } 
+            } else if (arreglo[indiceMedio] > valorABuscar) {
+                indiceSuperior = indiceMedio  - 1;
+                if (indiceInferior > indiceSuperior) {
+                    System.out.println("tu numero no se ha encontrado");    break;
+                }
+            } else {
+                System.out.println("El numero esta en la posicion: " + indiceMedio);
+                break;
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}; //tamaño de 20
