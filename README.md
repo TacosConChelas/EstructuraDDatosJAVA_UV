@@ -2,6 +2,8 @@
   <img  src="https://github.com/TacosConChelas/TacosConChelas/blob/main/TitleStyles/EstructuraDDatos_title.png" alt="Saludo" width="500" height="150"/>
 </div>
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
 ---
 ## EstructuraDDatosJAVA_UV:
 <p>
@@ -9,6 +11,8 @@
 Los saberes teóricos básicos que se abarcan en esta experiencia educativa van desde la introducción a las estructuras de datos, tipos y usos de datos, recursividad, métodos entre otros saberes teóricos que se deben manejar.
 Esto se realiza mediante la implementación de los diferentes métodos de búsquedas y ordenamientos en un lenguaje computacional.
 </p>
+
+
 
 ## Contenido
 
