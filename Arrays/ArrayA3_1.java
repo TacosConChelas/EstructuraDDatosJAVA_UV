@@ -25,5 +25,5 @@ public class ArrayA3_1 {
         System.out.println("Cantidad de numeros positivos: " + p + "\nCantidad de numeros negativos: "+ ne);
         System.out.println("Cantidad de numeros iguales a cero: " + c);
         leer.close();
-    }    
+    }       
 }
