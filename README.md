@@ -20,9 +20,13 @@ Esto se realiza mediante la implementación de los diferentes métodos de búsqu
   <li> <a title="Arrays" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Arrays"> Arrays  </a> </li>
   <li> <a title="Busqueda" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Busqueda"> Busqueda  </a> </li>
   <li> <a title="BusquedaBinaria" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/BusquedaBinaria"> BusquedaBinaria </a> </li>
+  <li> <a title="BusquedaBinaria" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Examen"> Examen </a> </li>
+  <li> <a title="BusquedaBinaria" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD"> Interfaces_yConeccionBD </a> </li>
+  <li> <a title="BusquedaBinaria" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/ListasYColas"> ListasYColas </a> </li>
   <li> <a title="OrdenamientoBurbuja" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/OrdenamientoBurbuja"> OrdenamientoBurbuja  </a> </li>
   <li> <a title="OrdenamientoInser" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/OrdenamientoInser"> OrdenamientoInser </a> </li>
   <li> <a title="Ordenamiento_Quicksort" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Ordenamiento_Quicksort"> Ordenamiento_Quicksort </a> </li>
+  <li> <a title="Ordenamiento_Quicksort" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Ordenamiento_Shellsort"> Ordenamiento_Shellsort </a> </li>
   <li> <a title="Programa" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Programa"> Programa </a> </li>
   <li> <a title="Recursividad" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Recursividad"> Recursividad </a> </li>
   
