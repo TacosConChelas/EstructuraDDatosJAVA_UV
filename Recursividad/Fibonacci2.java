@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /*
-     Hernández Ortega Adriel Xel Há      zS22015739
+    Hernández Ortega Adriel Xel Há      zS22015739
  */
 public class Fibonacci2 {
     public static long fibonacci(long posicion){

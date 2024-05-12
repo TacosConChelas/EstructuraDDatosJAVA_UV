@@ -21,3 +21,4 @@ public class Fibonancci1 {
         long ultnum = fibonacci(a);
     }
 }
+
