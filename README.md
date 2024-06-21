@@ -14,7 +14,7 @@ Esto se realiza mediante la implementación de los diferentes métodos de búsqu
 
 
 
-## Contenido
+## Contenido del repositorio
 
 <div>
   <li> <a title="Arrays" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Arrays"> Arrays  </a> </li>
