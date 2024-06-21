@@ -51,6 +51,13 @@ Esto se realiza mediante la implementación de los diferentes métodos de búsqu
   <li> <a title="Ordenamiento_Quicksort" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Ordenamiento_Shellsort"> Ordenamiento_Shellsort </a> </li>
   <li> <a title="Programa" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Programa"> Programa </a> </li>
   <li> <a title="Recursividad" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Recursividad"> Recursividad </a> </li>
+
+
+## Herramienta utilizada
+
+<a title="VisualStudioCode" href="https://code.visualstudio.com/"><img src="https://github.com/TacosConChelas/TacosConChelas/blob/main/Taco/VSC.png" title="VSC" alt="VSC" width="55" height="55"/></a>
+<a title="Apache" href="https://netbeans.apache.org/front/main/index.html"><img src="https://github.com/TacosConChelas/TacosConChelas/blob/main/Taco/apacheNetBeans.png" width="50" height="55"/></a>
+  
   
 
 </div>
