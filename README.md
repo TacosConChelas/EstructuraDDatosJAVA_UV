@@ -26,6 +26,18 @@ Esto se realiza mediante la implementación de los diferentes métodos de búsqu
     <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD"> Interfaces_yConeccionBD </a>
     <ul>
       <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/CalculadoraEcuacionesG1"> CalculadoraEcuacionesG1</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/Calculadora_java"> Calculadora_java </a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/ComprasAmazon"> ComprasAmazon </a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/ConexionBD"> ConexionBD </a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/Conta_AronMosqueda"> Conta_AronMosqueda </a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/Conta_Emma"> Conta_Emma </a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
+      <a title="Interfaces_yConeccionBD" href="https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main/Interfaces_yConeccionBD/AhorcadoGame"> AhorcadoGame</a>
     </ul>
 
   
