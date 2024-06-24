@@ -1,5 +1,6 @@
 package Logic;
 
+import Logic.BasicCalculator.JFBasicCalculator;
 import java.util.Date;
 
 /*
@@ -19,12 +20,16 @@ public class JFMainPantalla extends javax.swing.JFrame {
     public JFMainPantalla() {
         initComponents();
         this.jLToday.setText("Date: " + this.date());
+        this.message();
     }
 
     public static String date(){
-        Date date = new Date();
-        String fecha = date.toString();
+        Date date = new Date();     String fecha = date.toString();
         return fecha;
+    }
+     private void message(){
+        String mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente \nEspero les guste";
+        this.jTAWelcomeMessage.setText(mensaje);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,12 +48,21 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLBasicCalculadora = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTAWelcomeMessage = new javax.swing.JTextArea();
+        jBExit = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,25 +102,57 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(22, 22, 22));
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("jButton1");
+        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel9.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Calculadora");
+
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Universal");
+
+        jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
+        jLBasicCalculadora.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLBasicCalculadora.setForeground(new java.awt.Color(255, 255, 255));
+        jLBasicCalculadora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLBasicCalculadora.setText("Calculadora Básica");
+        jLBasicCalculadora.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLBasicCalculadora.setOpaque(true);
+        jLBasicCalculadora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLBasicCalculadoraMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLBasicCalculadoraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLBasicCalculadoraMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLBasicCalculadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jButton1)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addComponent(jButton1)
-                .addContainerGap(620, Short.MAX_VALUE))
+                .addGap(65, 65, 65)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addComponent(jLBasicCalculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(537, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
@@ -120,6 +166,24 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel5.setOpaque(true);
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 590, -1));
 
+        jTAWelcomeMessage.setBackground(new java.awt.Color(51, 51, 51));
+        jTAWelcomeMessage.setColumns(20);
+        jTAWelcomeMessage.setRows(5);
+        jTAWelcomeMessage.setOpaque(false);
+        jScrollPane1.setViewportView(jTAWelcomeMessage);
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 1000, -1));
+
+        jBExit.setBackground(new java.awt.Color(22, 22, 22));
+        jBExit.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBExit.setText("Exit");
+        jBExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBExitMouseClicked(evt);
+            }
+        });
+        jPanel2.add(jBExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, -1, -1));
+
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,14 +193,16 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel7.setOpaque(true);
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 280, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/im1.jpg"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 1190, 740));
+        jLBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/im1.jpg"))); // NOI18N
+        jPanel2.add(jLBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 1190, 740));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +213,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1300, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,6 +222,35 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLBasicCalculadoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseEntered
+        this.jLBasicCalculadora.setBackground(new java.awt.Color(0, 0, 0));
+        
+        
+        
+    }//GEN-LAST:event_jLBasicCalculadoraMouseEntered
+
+    private void jLBasicCalculadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseExited
+        this.jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
+        
+        
+        
+    }//GEN-LAST:event_jLBasicCalculadoraMouseExited
+
+    private void jLBasicCalculadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseClicked
+        JFBasicCalculator basicC = new JFBasicCalculator();
+        basicC.setVisible(true);
+        
+    }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
+
+    private void jBExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBExitMouseClicked
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jBExitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -193,17 +288,22 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBExit;
+    private javax.swing.JLabel jLBackground;
+    private javax.swing.JLabel jLBasicCalculadora;
     private javax.swing.JLabel jLToday;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTAWelcomeMessage;
     // End of variables declaration//GEN-END:variables
 }
