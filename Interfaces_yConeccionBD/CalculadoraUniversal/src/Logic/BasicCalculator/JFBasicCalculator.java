@@ -280,7 +280,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
          JFMainPantalla  mainPantalla = new JFMainPantalla();
          mainPantalla.setVisible(true);
-         mainPantalla.setLocationRelativeTo(null);
+         mainPantalla.setLocationRelativeTo(null);  //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLabel7MouseClicked
 

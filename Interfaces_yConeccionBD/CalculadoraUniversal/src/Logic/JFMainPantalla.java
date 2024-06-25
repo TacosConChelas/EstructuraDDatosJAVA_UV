@@ -353,28 +353,43 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
         JFCalculatorGeometry geometry = new JFCalculatorGeometry();
         geometry.setVisible(true);
-        
+        geometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLGeometriaMouseClicked
 
     private void jLGeometriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseEntered
          this.jLGeometria.setBackground(new java.awt.Color(0, 0, 0));
+         
+         
     }//GEN-LAST:event_jLGeometriaMouseEntered
 
     private void jLGeometriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseExited
          this.jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
+         
+         
             
     }//GEN-LAST:event_jLGeometriaMouseExited
 
     private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
-        // TODO add your handling code here:
+        JFCalculatorTrigonometry trigonometry = new JFCalculatorTrigonometry();
+        trigonometry.setVisible(true);
+        trigonometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        this.dispose(); //se cirran todas las ventanas actualles
+        
+        
+        
     }//GEN-LAST:event_jLTrigonometryMouseClicked
 
     private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
-        // TODO add your handling code here:
+        this.jLTrigonometry.setBackground(new java.awt.Color(0, 0, 0));
+        
+        
     }//GEN-LAST:event_jLTrigonometryMouseEntered
 
     private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
-        // TODO add your handling code here:
+       this.jLTrigonometry.setBackground(new java.awt.Color(0, 0, 0));
+       
+       
     }//GEN-LAST:event_jLTrigonometryMouseExited
 
     private void jLCalculoDiferencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseClicked
