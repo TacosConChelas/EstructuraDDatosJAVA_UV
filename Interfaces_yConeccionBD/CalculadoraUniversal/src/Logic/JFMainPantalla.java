@@ -1,6 +1,8 @@
 package Logic;
 
 import Logic.BasicCalculator.JFBasicCalculator;
+import Logic.Geometria.JFCalculatorGeometry;
+import Logic.Trigonometria.JFCalculatorTrigonometry;
 import java.util.Date;
 
 /*
@@ -19,17 +21,43 @@ public class JFMainPantalla extends javax.swing.JFrame {
      */
     public JFMainPantalla() {
         initComponents();
-        this.jLToday.setText("Date: " + this.date());
-        this.message();
+        this.jLToday.setText("Date: " + this.date());   //Se muestra en el recuadro la fecha
+        this.message(0);    //Se muestra el mensaje general
     }
 
     public static String date(){
-        Date date = new Date();     String fecha = date.toString();
-        return fecha;
+        //Se crea un objeto apartir de la clase Date()
+        Date date = new Date();     
+        return date.toString(); //Se devuelve el objeto usando .toString() para convertir la fehca en un texto
     }
-     private void message(){
-        String mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente \nEspero les guste";
-        this.jTAWelcomeMessage.setText(mensaje);
+     private void message(int option){
+        String mensaje = " ";
+        switch(option){
+                  case 0:
+                           //mensaje general
+                           mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente. Al costado derecho podran encontrar las " 
+                                   +        "\ndiferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas," 
+                                   +        "\nademas de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
+                                   +        "\n \nSi decea conocer el codigo fuente puede consultar el repositorio en el cual se encuentra, ademas de otros proyectos hechos por el mismo creador: "
+                                   +        "\nRepositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main";
+                           break;
+                  case 1:
+                           //mensaje para la calculadora basica
+                           mensaje = "Esta calculadora cuenta con las operaciones basicas, estas son: \n1) Suma (+) \n2) Resta (-) \n3) Multiplicacion (x) \n4) Divicion (÷) \nAdemas de esto incluimos 2 operaciones"
+                                    +       " mas: \n1) Raiz (√) \n2) Porcentaje (%)";
+                           break;
+                  case 2:
+                            //mensaje  para la calculadora de trigonometria
+                            mensaje = "";
+                           break;
+                  case 3: 
+                           //mensaje paral a calculadora de geometria
+                           mensaje = "";
+                           break;
+                  default:      System.out.println("Error en la seleccion  del menaje");    break;
+                  
+        
+        }       this.jTAMessage.setText(mensaje);   //dependiendo del valor del a variable option sera el mensaje que se muestre 
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,10 +79,12 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLBasicCalculadora = new javax.swing.JLabel();
+        jLTrigonometry = new javax.swing.JLabel();
+        jLGeometria = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTAWelcomeMessage = new javax.swing.JTextArea();
-        jBExit = new javax.swing.JButton();
+        jTAMessage = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         jLBackground = new javax.swing.JLabel();
 
@@ -101,16 +131,19 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 1040, 190));
 
         jPanel3.setBackground(new java.awt.Color(22, 22, 22));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Calculadora");
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 65, 215, -1));
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Universal");
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 116, 215, -1));
 
         jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
         jLBasicCalculadora.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -130,30 +163,47 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLBasicCalculadoraMouseExited(evt);
             }
         });
+        jPanel3.add(jLBasicCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 167, 260, 36));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLBasicCalculadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel9)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel10)
-                .addGap(18, 18, 18)
-                .addComponent(jLBasicCalculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(537, Short.MAX_VALUE))
-        );
+        jLTrigonometry.setBackground(new java.awt.Color(22, 22, 22));
+        jLTrigonometry.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLTrigonometry.setForeground(new java.awt.Color(255, 255, 255));
+        jLTrigonometry.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTrigonometry.setText("Trigonometría");
+        jLTrigonometry.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLTrigonometry.setOpaque(true);
+        jLTrigonometry.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLTrigonometry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 260, 36));
+
+        jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
+        jLGeometria.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLGeometria.setForeground(new java.awt.Color(255, 255, 255));
+        jLGeometria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLGeometria.setText("Geometría");
+        jLGeometria.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLGeometria.setOpaque(true);
+        jLGeometria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLGeometriaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLGeometriaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLGeometriaMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLGeometria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 260, 36));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
 
@@ -164,25 +214,30 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel5.setText("Repositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main");
         jLabel5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         jLabel5.setOpaque(true);
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 590, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 540, -1));
 
-        jTAWelcomeMessage.setBackground(new java.awt.Color(51, 51, 51));
-        jTAWelcomeMessage.setColumns(20);
-        jTAWelcomeMessage.setRows(5);
-        jTAWelcomeMessage.setOpaque(false);
-        jScrollPane1.setViewportView(jTAWelcomeMessage);
-
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 1000, -1));
-
-        jBExit.setBackground(new java.awt.Color(22, 22, 22));
-        jBExit.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jBExit.setText("Exit");
-        jBExit.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel11.setBackground(new java.awt.Color(40, 40, 40));
+        jLabel11.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Exit");
+        jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jLabel11.setOpaque(true);
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jBExitMouseClicked(evt);
+                jLabel11MouseClicked(evt);
             }
         });
-        jPanel2.add(jBExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 60, 30));
+
+        jTAMessage.setBackground(new java.awt.Color(41, 41, 41));
+        jTAMessage.setColumns(20);
+        jTAMessage.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 9)); // NOI18N
+        jTAMessage.setForeground(new java.awt.Color(255, 255, 255));
+        jTAMessage.setRows(5);
+        jScrollPane1.setViewportView(jTAMessage);
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 980, 240));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
@@ -191,7 +246,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel7.setText("Autor: Adriel Xel Há Hernández Ortega");
         jLabel7.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         jLabel7.setOpaque(true);
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 280, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 270, -1));
 
         jLBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/im1.jpg"))); // NOI18N
         jPanel2.add(jLBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 1190, 740));
@@ -201,7 +256,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -213,7 +268,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,33 +279,63 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLBasicCalculadoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseEntered
+        //Cuando el mouse este sobre este  recuadro se cambiara el color a [0, 0, 0] en el RGB
         this.jLBasicCalculadora.setBackground(new java.awt.Color(0, 0, 0));
-        
-        
-        
+        //se muestra la dscripcion correspondiente
+        this.message(1);
     }//GEN-LAST:event_jLBasicCalculadoraMouseEntered
 
     private void jLBasicCalculadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseExited
+        //Cuando el mouse deje de estar sobre este  recuadro se cambiara el color a [22, 22, 22] en el RGB
         this.jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
         
-        
+        //Ademas de esto, volvera a mostrar el mensaje general
+        this.message(0);
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseExited
 
     private void jLBasicCalculadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseClicked
+        //Se crea un objeto apartir de la clase JFBasicCalculator
         JFBasicCalculator basicC = new JFBasicCalculator();
-        basicC.setVisible(true);
+        basicC.setVisible(true);    //Se hace visible
+        this.dispose(); //se cirran todas las ventanas actualles
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
 
-    private void jBExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBExitMouseClicked
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        //Se ejecuta cuando el usuario da clic en el boton de salir
+        System.exit(0);
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
+        JFCalculatorTrigonometry trigonometria = new JFCalculatorTrigonometry();
+        trigonometria.setVisible(true);//Se hace visible
+        this.dispose(); //se cirran todas las ventanas actualles
         
+    }//GEN-LAST:event_jLTrigonometryMouseClicked
+
+    private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLTrigonometryMouseEntered
+
+    private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLTrigonometryMouseExited
+
+    private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
+        JFCalculatorGeometry geometry = new JFCalculatorGeometry();
+        geometry.setVisible(true);
         
-        
-        
-        
-        
-    }//GEN-LAST:event_jBExitMouseClicked
+    }//GEN-LAST:event_jLGeometriaMouseClicked
+
+    private void jLGeometriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseEntered
+         this.jLGeometria.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLGeometriaMouseEntered
+
+    private void jLGeometriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseExited
+         this.jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
+            
+    }//GEN-LAST:event_jLGeometriaMouseExited
 
     /**
      * @param args the command line arguments
@@ -288,11 +373,13 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBExit;
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
+    private javax.swing.JLabel jLGeometria;
     private javax.swing.JLabel jLToday;
+    private javax.swing.JLabel jLTrigonometry;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -304,6 +391,6 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTAWelcomeMessage;
+    private javax.swing.JTextArea jTAMessage;
     // End of variables declaration//GEN-END:variables
 }
