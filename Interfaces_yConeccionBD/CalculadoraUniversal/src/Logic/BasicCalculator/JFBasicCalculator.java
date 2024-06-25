@@ -12,11 +12,49 @@ import Logic.JFMainPantalla;
  */
 public class JFBasicCalculator extends javax.swing.JFrame {
 
+    private double total = 0;
+    private double num1 = 0;
+    private double num2 = 0;
+    private byte signo;
+    private boolean permiso;
     /**
      * Creates new form JFBasicCalculator
      */
     public JFBasicCalculator() {
         initComponents();
+    }
+    
+    //Metodos GETTERS y SETTERS
+    public void setTotal(double t){     this.total = t;     }   //coloca el total que se tenga asta el momento
+    public void setNum1(double n){     this.num1 = n;    }
+    public void setNum2(double n){     this.num2 = n;    }
+    public void setSigno(byte s){       this.signo = s;     }
+    
+    public double getTotal(){       return this.total;}
+    public double getNum1(){     return this.num1;        }
+    public double getNum2(){     return this.num2;        }
+    public byte getSigno(){     return this.signo;      }
+    
+    private void operaciones(byte op, int base, double numero){
+        switch(op){       
+            case 0:
+                //se traen los valores actuales de ambos numeros que esten guardados y se suman, ademas de colocar el resultado en la 
+                this.setTotal(this.getNum1() + this.getNum2());  
+                this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
+                this.setNum1(0); this.setNum2(0); //se reinician ambas variables a sus valores por defecto
+                break;
+            case 1:
+                 //se traen los valores actuales de ambos numeros que esten guardados y se restan, ademas de colocar el resultado en la 
+                this.setTotal(this.getNum1() - this.getNum2());  
+                this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
+                this.setNum1(0); this.setNum2(0); //se reinician ambas variables a sus valores por defecto
+                break;
+            case 2:
+                this.setTotal(this.getNum1() * this.getNum2());
+                break;
+        }
+    
+    
     }
 
     /**
@@ -42,23 +80,25 @@ public class JFBasicCalculator extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        jBDivicion = new javax.swing.JButton();
+        jBResta = new javax.swing.JButton();
+        jBMultiplicacion = new javax.swing.JButton();
+        jBSuma = new javax.swing.JButton();
+        jBRaiz = new javax.swing.JButton();
+        jBPotencia = new javax.swing.JButton();
+        jBUltimoResultado = new javax.swing.JButton();
+        jBBorrarUltimoNumero = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLResultado = new javax.swing.JLabel();
+        jLOperaciones = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
+        jBBorrarTodo = new javax.swing.JButton();
+        jBPorcentaje = new javax.swing.JButton();
+        jBIgual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,146 +120,210 @@ public class JFBasicCalculator extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("3");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 80, -1));
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("2");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 80, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("1");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 80, -1));
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("4");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 80, -1));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 80, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("5");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 80, -1));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 80, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("6");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 80, -1));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 80, -1));
 
         jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setText("00");
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 130, -1));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 80, -1));
 
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton9.setForeground(new java.awt.Color(0, 0, 0));
         jButton9.setText("8");
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 80, -1));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 80, -1));
 
         jButton10.setBackground(new java.awt.Color(255, 255, 255));
         jButton10.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton10.setForeground(new java.awt.Color(0, 0, 0));
         jButton10.setText("9");
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 80, -1));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 80, -1));
 
         jButton11.setBackground(new java.awt.Color(255, 255, 255));
         jButton11.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.setText("7");
-        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 80, -1));
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 80, -1));
 
         jButton12.setBackground(new java.awt.Color(255, 255, 255));
         jButton12.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("0");
-        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 130, -1));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 80, -1));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("÷");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 80, -1));
+        jBDivicion.setBackground(new java.awt.Color(255, 255, 255));
+        jBDivicion.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBDivicion.setForeground(new java.awt.Color(0, 0, 0));
+        jBDivicion.setText("÷");
+        jPanel1.add(jBDivicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 80, -1));
 
-        jButton13.setBackground(new java.awt.Color(255, 255, 255));
-        jButton13.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(0, 0, 0));
-        jButton13.setText("-");
-        jPanel1.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 80, -1));
+        jBResta.setBackground(new java.awt.Color(255, 255, 255));
+        jBResta.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBResta.setForeground(new java.awt.Color(0, 0, 0));
+        jBResta.setText("-");
+        jPanel1.add(jBResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 80, -1));
 
-        jButton15.setBackground(new java.awt.Color(255, 255, 255));
-        jButton15.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(0, 0, 0));
-        jButton15.setText("x");
-        jPanel1.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 80, -1));
+        jBMultiplicacion.setBackground(new java.awt.Color(255, 255, 255));
+        jBMultiplicacion.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBMultiplicacion.setForeground(new java.awt.Color(0, 0, 0));
+        jBMultiplicacion.setText("x");
+        jPanel1.add(jBMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 80, -1));
 
-        jButton16.setBackground(new java.awt.Color(255, 255, 255));
-        jButton16.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(0, 0, 0));
-        jButton16.setText("+");
-        jPanel1.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 80, -1));
+        jBSuma.setBackground(new java.awt.Color(255, 255, 255));
+        jBSuma.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBSuma.setForeground(new java.awt.Color(0, 0, 0));
+        jBSuma.setText("+");
+        jBSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSumaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 80, -1));
 
-        jButton17.setBackground(new java.awt.Color(255, 255, 255));
-        jButton17.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(0, 0, 0));
-        jButton17.setText("√");
-        jPanel1.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 80, -1));
+        jBRaiz.setBackground(new java.awt.Color(255, 255, 255));
+        jBRaiz.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBRaiz.setForeground(new java.awt.Color(0, 0, 0));
+        jBRaiz.setText("√");
+        jPanel1.add(jBRaiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 80, -1));
 
-        jButton18.setBackground(new java.awt.Color(255, 255, 255));
-        jButton18.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(0, 0, 0));
-        jButton18.setText("^");
-        jPanel1.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 80, -1));
+        jBPotencia.setBackground(new java.awt.Color(255, 255, 255));
+        jBPotencia.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBPotencia.setForeground(new java.awt.Color(0, 0, 0));
+        jBPotencia.setText("^");
+        jPanel1.add(jBPotencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 80, -1));
 
-        jButton19.setBackground(new java.awt.Color(255, 255, 255));
-        jButton19.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(0, 0, 0));
-        jButton19.setText("%");
-        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 80, -1));
+        jBUltimoResultado.setBackground(new java.awt.Color(255, 255, 255));
+        jBUltimoResultado.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBUltimoResultado.setForeground(new java.awt.Color(0, 0, 0));
+        jBUltimoResultado.setText("ANS");
+        jPanel1.add(jBUltimoResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 80, -1));
 
-        jButton20.setBackground(new java.awt.Color(255, 255, 255));
-        jButton20.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton20.setForeground(new java.awt.Color(0, 0, 0));
-        jButton20.setText("Borrar último");
-        jPanel1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 170, -1));
+        jBBorrarUltimoNumero.setBackground(new java.awt.Color(255, 255, 255));
+        jBBorrarUltimoNumero.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBBorrarUltimoNumero.setForeground(new java.awt.Color(0, 0, 0));
+        jBBorrarUltimoNumero.setText("Borrar último");
+        jBBorrarUltimoNumero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBorrarUltimoNumeroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBBorrarUltimoNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, -1));
 
         jTextField1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("2");
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 130, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 180, 130, -1));
 
         jLabel3.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Resultado:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, -1, -1));
 
-        jLabel4.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel4.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("0.00");
-        jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 330, 40));
+        jLResultado.setBackground(new java.awt.Color(102, 102, 102));
+        jLResultado.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLResultado.setForeground(new java.awt.Color(255, 255, 255));
+        jLResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLResultado.setText("0.00");
+        jLResultado.setOpaque(true);
+        jPanel1.add(jLResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 330, 40));
 
-        jLabel5.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel5.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("0.00");
-        jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 280, 40));
+        jLOperaciones.setBackground(new java.awt.Color(102, 102, 102));
+        jLOperaciones.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLOperaciones.setForeground(new java.awt.Color(255, 255, 255));
+        jLOperaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLOperaciones.setOpaque(true);
+        jPanel1.add(jLOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 280, 40));
 
         jLabel6.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Base de √ ó ^:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(22, 22, 22));
         jLabel7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
@@ -232,7 +336,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                 jLabel7MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 190, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 190, 30));
 
         jLabel8.setBackground(new java.awt.Color(22, 22, 22));
         jLabel8.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
@@ -245,25 +349,52 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 70, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 70, 30));
 
         jButton21.setBackground(new java.awt.Color(255, 255, 255));
         jButton21.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jButton21.setForeground(new java.awt.Color(0, 0, 0));
         jButton21.setText("π");
-        jPanel1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 80, -1));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 80, -1));
 
-        jButton22.setBackground(new java.awt.Color(255, 255, 255));
-        jButton22.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
-        jButton22.setForeground(new java.awt.Color(0, 0, 0));
-        jButton22.setText("Borrar todo");
-        jPanel1.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 170, -1));
+        jBBorrarTodo.setBackground(new java.awt.Color(255, 255, 255));
+        jBBorrarTodo.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBBorrarTodo.setForeground(new java.awt.Color(0, 0, 0));
+        jBBorrarTodo.setText("Borrar todo");
+        jBBorrarTodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBorrarTodoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBBorrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 170, -1));
+
+        jBPorcentaje.setBackground(new java.awt.Color(255, 255, 255));
+        jBPorcentaje.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBPorcentaje.setForeground(new java.awt.Color(0, 0, 0));
+        jBPorcentaje.setText("%");
+        jPanel1.add(jBPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 80, -1));
+
+        jBIgual.setBackground(new java.awt.Color(255, 255, 255));
+        jBIgual.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jBIgual.setForeground(new java.awt.Color(0, 0, 0));
+        jBIgual.setText("=");
+        jBIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBIgualActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 260, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,6 +414,96 @@ public class JFBasicCalculator extends javax.swing.JFrame {
          mainPantalla.setLocationRelativeTo(null);  //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jBBorrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarTodoActionPerformed
+        this.jLOperaciones.setText("");
+        this.jLResultado.setText("0.00");
+        
+    }//GEN-LAST:event_jBBorrarTodoActionPerformed
+
+    private void jBBorrarUltimoNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarUltimoNumeroActionPerformed
+       this.jLOperaciones.setText("");
+    }//GEN-LAST:event_jBBorrarUltimoNumeroActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jLOperaciones.setText(jLOperaciones.getText() + "1"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 1
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "2"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 2
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "3"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 3
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        jLOperaciones.setText(jLOperaciones.getText() + "4"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 4
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "5"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 5
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        jLOperaciones.setText(jLOperaciones.getText() + "6"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 6
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "7"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 7
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "8"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 8
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "9"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 9
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "0"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 0
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+         jLOperaciones.setText(jLOperaciones.getText() + "00"); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 00
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+         jLOperaciones.setText("" + Math.PI); 
+        //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar PI
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jBSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSumaActionPerformed
+         if((this.getNum1() == 0) && (this.getNum2() != 0)){
+                  this.setNum1(Float.valueOf(this.jLOperaciones.getText()));
+                  
+         } else if((this.getNum2() == 0) && (this.getNum1() != 0)){
+                   this.setNum2(Float.valueOf(this.jLOperaciones.getText()));
+         
+         } else if((this.getNum1() == 0) && (this.getNum2() == 0)){
+                  this.setNum1(Float.valueOf(this.jLOperaciones.getText()));
+         
+         }
+    }//GEN-LAST:event_jBSumaActionPerformed
+
+    private void jBIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIgualActionPerformed
+       this.jLOperaciones.setText("");
+       this.jLResultado.setText(this.getTotal() + "");
+       
+    }//GEN-LAST:event_jBIgualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,20 +541,22 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBBorrarTodo;
+    private javax.swing.JButton jBBorrarUltimoNumero;
+    private javax.swing.JButton jBDivicion;
+    private javax.swing.JButton jBIgual;
+    private javax.swing.JButton jBMultiplicacion;
+    private javax.swing.JButton jBPorcentaje;
+    private javax.swing.JButton jBPotencia;
+    private javax.swing.JButton jBRaiz;
+    private javax.swing.JButton jBResta;
+    private javax.swing.JButton jBSuma;
+    private javax.swing.JButton jBUltimoResultado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -341,11 +564,11 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLOperaciones;
+    private javax.swing.JLabel jLResultado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

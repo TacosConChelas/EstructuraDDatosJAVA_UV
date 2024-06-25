@@ -367,6 +367,8 @@ public class Interfas1_c extends javax.swing.JFrame {
                 break;
         }
         //Si jaloooooooo al primer intento uuuuuuuuuuuuuuuuuuuuuu :D
+        //comentaario del Adriel de 4 meses en el futuro leyendo este comentario <3 saviendo que se logro y mucho mas
+        
         
     }//GEN-LAST:event_igualAActionPerformed
 

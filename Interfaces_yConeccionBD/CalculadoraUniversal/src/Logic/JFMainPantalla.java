@@ -1,6 +1,8 @@
 package Logic;
 
 import Logic.BasicCalculator.JFBasicCalculator;
+import Logic.CalculoDiferencial.JFCalculoDiferencial;
+import Logic.CalculoIntegral.JFCalculoIntegral;
 import Logic.Geometria.JFCalculatorGeometry;
 import Logic.Trigonometria.JFCalculatorTrigonometry;
 import java.util.Date;
@@ -82,7 +84,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLGeometria = new javax.swing.JLabel();
         jLTrigonometry = new javax.swing.JLabel();
         jLCalculoDiferencial = new javax.swing.JLabel();
-        jLCalculoDiferencial1 = new javax.swing.JLabel();
+        jLCalculoIntegral = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -227,25 +229,25 @@ public class JFMainPantalla extends javax.swing.JFrame {
         });
         jPanel3.add(jLCalculoDiferencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 266, 260, 36));
 
-        jLCalculoDiferencial1.setBackground(new java.awt.Color(22, 22, 22));
-        jLCalculoDiferencial1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
-        jLCalculoDiferencial1.setForeground(new java.awt.Color(255, 255, 255));
-        jLCalculoDiferencial1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLCalculoDiferencial1.setText("Cálculo Integral");
-        jLCalculoDiferencial1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jLCalculoDiferencial1.setOpaque(true);
-        jLCalculoDiferencial1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLCalculoIntegral.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculoIntegral.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculoIntegral.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculoIntegral.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculoIntegral.setText("Cálculo Integral");
+        jLCalculoIntegral.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculoIntegral.setOpaque(true);
+        jLCalculoIntegral.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLCalculoDiferencial1MouseClicked(evt);
+                jLCalculoIntegralMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLCalculoDiferencial1MouseEntered(evt);
+                jLCalculoIntegralMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLCalculoDiferencial1MouseExited(evt);
+                jLCalculoIntegralMouseExited(evt);
             }
         });
-        jPanel3.add(jLCalculoDiferencial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 260, 36));
+        jPanel3.add(jLCalculoIntegral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 260, 36));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
 
@@ -253,10 +255,10 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Repositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main");
+        jLabel5.setText("Repositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/");
         jLabel5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         jLabel5.setOpaque(true);
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 540, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 470, -1));
 
         jLabel11.setBackground(new java.awt.Color(40, 40, 40));
         jLabel11.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
@@ -393,28 +395,36 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jLTrigonometryMouseExited
 
     private void jLCalculoDiferencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseClicked
-        // TODO add your handling code here:
+        JFCalculoDiferencial calculoD = new JFCalculoDiferencial();
+        calculoD.setVisible(true);
+        calculoD.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLCalculoDiferencialMouseClicked
 
     private void jLCalculoDiferencialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseEntered
-        // TODO add your handling code here:
+        this.jLCalculoDiferencial.setBackground(new java.awt.Color(0, 0, 0));
+        
+        
     }//GEN-LAST:event_jLCalculoDiferencialMouseEntered
 
     private void jLCalculoDiferencialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseExited
-        // TODO add your handling code here:
+        this.jLCalculoDiferencial.setBackground(new java.awt.Color(22,22,22));
     }//GEN-LAST:event_jLCalculoDiferencialMouseExited
 
-    private void jLCalculoDiferencial1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLCalculoDiferencial1MouseClicked
+    private void jLCalculoIntegralMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseClicked
+        JFCalculoIntegral calculoI = new JFCalculoIntegral();
+        calculoI.setVisible(true);
+        calculoI.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        this.dispose(); //se cirran todas las ventanas actualles
+    }//GEN-LAST:event_jLCalculoIntegralMouseClicked
 
-    private void jLCalculoDiferencial1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLCalculoDiferencial1MouseEntered
+    private void jLCalculoIntegralMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseEntered
+        this.jLCalculoIntegral.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLCalculoIntegralMouseEntered
 
-    private void jLCalculoDiferencial1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLCalculoDiferencial1MouseExited
+    private void jLCalculoIntegralMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseExited
+        this.jLCalculoIntegral.setBackground(new java.awt.Color(22,22,22));
+    }//GEN-LAST:event_jLCalculoIntegralMouseExited
 
     /**
      * @param args the command line arguments
@@ -455,7 +465,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
     private javax.swing.JLabel jLCalculoDiferencial;
-    private javax.swing.JLabel jLCalculoDiferencial1;
+    private javax.swing.JLabel jLCalculoIntegral;
     private javax.swing.JLabel jLGeometria;
     private javax.swing.JLabel jLToday;
     private javax.swing.JLabel jLTrigonometry;
