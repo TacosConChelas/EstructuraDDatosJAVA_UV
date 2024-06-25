@@ -43,8 +43,8 @@ public class JFMainPantalla extends javax.swing.JFrame {
                            break;
                   case 1:
                            //mensaje para la calculadora basica
-                           mensaje = "Esta calculadora cuenta con las operaciones basicas, estas son: \n1) Suma (+) \n2) Resta (-) \n3) Multiplicacion (x) \n4) Divicion (÷) \nAdemas de esto incluimos 2 operaciones"
-                                    +       " mas: \n1) Raiz (√) \n2) Porcentaje (%)";
+                           mensaje = "Esta calculadora cuenta con las operaciones basicas, estas son: \n1) Suma (+) \n2) Resta (-) \n3) Multiplicacion (x) \n4) Divicion (÷) \nIncluimos 3 operaciones"
+                                    +       " mas y la constante PI: \n1) Raiz (√) \n2) Porcentaje (%) \n3) Potencia (^) \n4) PI (π)";
                            break;
                   case 2:
                             //mensaje  para la calculadora de trigonometria
@@ -79,8 +79,10 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLBasicCalculadora = new javax.swing.JLabel();
-        jLTrigonometry = new javax.swing.JLabel();
         jLGeometria = new javax.swing.JLabel();
+        jLTrigonometry = new javax.swing.JLabel();
+        jLCalculoDiferencial = new javax.swing.JLabel();
+        jLCalculoDiferencial1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -165,26 +167,6 @@ public class JFMainPantalla extends javax.swing.JFrame {
         });
         jPanel3.add(jLBasicCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 167, 260, 36));
 
-        jLTrigonometry.setBackground(new java.awt.Color(22, 22, 22));
-        jLTrigonometry.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
-        jLTrigonometry.setForeground(new java.awt.Color(255, 255, 255));
-        jLTrigonometry.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTrigonometry.setText("Trigonometría");
-        jLTrigonometry.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jLTrigonometry.setOpaque(true);
-        jLTrigonometry.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLTrigonometryMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLTrigonometryMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLTrigonometryMouseExited(evt);
-            }
-        });
-        jPanel3.add(jLTrigonometry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 260, 36));
-
         jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
         jLGeometria.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
         jLGeometria.setForeground(new java.awt.Color(255, 255, 255));
@@ -204,6 +186,66 @@ public class JFMainPantalla extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLGeometria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 260, 36));
+
+        jLTrigonometry.setBackground(new java.awt.Color(22, 22, 22));
+        jLTrigonometry.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLTrigonometry.setForeground(new java.awt.Color(255, 255, 255));
+        jLTrigonometry.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTrigonometry.setText("Trigonometría");
+        jLTrigonometry.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLTrigonometry.setOpaque(true);
+        jLTrigonometry.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLTrigonometryMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLTrigonometry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 232, 260, 36));
+
+        jLCalculoDiferencial.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculoDiferencial.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculoDiferencial.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculoDiferencial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculoDiferencial.setText("Cálculo Diferencial");
+        jLCalculoDiferencial.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculoDiferencial.setOpaque(true);
+        jLCalculoDiferencial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencialMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLCalculoDiferencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 266, 260, 36));
+
+        jLCalculoDiferencial1.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculoDiferencial1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculoDiferencial1.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculoDiferencial1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculoDiferencial1.setText("Cálculo Integral");
+        jLCalculoDiferencial1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculoDiferencial1.setOpaque(true);
+        jLCalculoDiferencial1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencial1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencial1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLCalculoDiferencial1MouseExited(evt);
+            }
+        });
+        jPanel3.add(jLCalculoDiferencial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 260, 36));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
 
@@ -298,6 +340,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         //Se crea un objeto apartir de la clase JFBasicCalculator
         JFBasicCalculator basicC = new JFBasicCalculator();
         basicC.setVisible(true);    //Se hace visible
+        basicC.setLocationRelativeTo(null);
         this.dispose(); //se cirran todas las ventanas actualles
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
@@ -306,21 +349,6 @@ public class JFMainPantalla extends javax.swing.JFrame {
         //Se ejecuta cuando el usuario da clic en el boton de salir
         System.exit(0);
     }//GEN-LAST:event_jLabel11MouseClicked
-
-    private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
-        JFCalculatorTrigonometry trigonometria = new JFCalculatorTrigonometry();
-        trigonometria.setVisible(true);//Se hace visible
-        this.dispose(); //se cirran todas las ventanas actualles
-        
-    }//GEN-LAST:event_jLTrigonometryMouseClicked
-
-    private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLTrigonometryMouseEntered
-
-    private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLTrigonometryMouseExited
 
     private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
         JFCalculatorGeometry geometry = new JFCalculatorGeometry();
@@ -336,6 +364,42 @@ public class JFMainPantalla extends javax.swing.JFrame {
          this.jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
             
     }//GEN-LAST:event_jLGeometriaMouseExited
+
+    private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLTrigonometryMouseClicked
+
+    private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLTrigonometryMouseEntered
+
+    private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLTrigonometryMouseExited
+
+    private void jLCalculoDiferencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencialMouseClicked
+
+    private void jLCalculoDiferencialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencialMouseEntered
+
+    private void jLCalculoDiferencialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencialMouseExited
+
+    private void jLCalculoDiferencial1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencial1MouseClicked
+
+    private void jLCalculoDiferencial1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencial1MouseEntered
+
+    private void jLCalculoDiferencial1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencial1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculoDiferencial1MouseExited
 
     /**
      * @param args the command line arguments
@@ -375,6 +439,8 @@ public class JFMainPantalla extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
+    private javax.swing.JLabel jLCalculoDiferencial;
+    private javax.swing.JLabel jLCalculoDiferencial1;
     private javax.swing.JLabel jLGeometria;
     private javax.swing.JLabel jLToday;
     private javax.swing.JLabel jLTrigonometry;

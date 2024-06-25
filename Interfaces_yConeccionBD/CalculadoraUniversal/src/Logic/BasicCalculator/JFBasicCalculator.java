@@ -4,6 +4,8 @@
  */
 package Logic.BasicCalculator;
 
+import Logic.JFMainPantalla;
+
 /**
  *
  * @author TheOneAboveAll
@@ -26,21 +28,261 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(40, 40, 40));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setBackground(new java.awt.Color(22, 22, 22));
+        jLabel2.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("    Calculadora Básica");
+        jLabel2.setOpaque(true);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 280, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imgBasicCalculator.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 310));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("3");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 80, -1));
+
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
+        jButton5.setText("2");
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 80, -1));
+
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
+        jButton3.setText("1");
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 80, -1));
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setText("4");
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 80, -1));
+
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
+        jButton6.setText("5");
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 80, -1));
+
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(0, 0, 0));
+        jButton7.setText("6");
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 80, -1));
+
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
+        jButton8.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(0, 0, 0));
+        jButton8.setText("00");
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 130, -1));
+
+        jButton9.setBackground(new java.awt.Color(255, 255, 255));
+        jButton9.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(0, 0, 0));
+        jButton9.setText("8");
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 80, -1));
+
+        jButton10.setBackground(new java.awt.Color(255, 255, 255));
+        jButton10.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(0, 0, 0));
+        jButton10.setText("9");
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 80, -1));
+
+        jButton11.setBackground(new java.awt.Color(255, 255, 255));
+        jButton11.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(0, 0, 0));
+        jButton11.setText("7");
+        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 80, -1));
+
+        jButton12.setBackground(new java.awt.Color(255, 255, 255));
+        jButton12.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(0, 0, 0));
+        jButton12.setText("0");
+        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 130, -1));
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("÷");
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 80, -1));
+
+        jButton13.setBackground(new java.awt.Color(255, 255, 255));
+        jButton13.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(0, 0, 0));
+        jButton13.setText("-");
+        jPanel1.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 80, -1));
+
+        jButton15.setBackground(new java.awt.Color(255, 255, 255));
+        jButton15.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(0, 0, 0));
+        jButton15.setText("x");
+        jPanel1.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 80, -1));
+
+        jButton16.setBackground(new java.awt.Color(255, 255, 255));
+        jButton16.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(0, 0, 0));
+        jButton16.setText("+");
+        jPanel1.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 80, -1));
+
+        jButton17.setBackground(new java.awt.Color(255, 255, 255));
+        jButton17.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton17.setForeground(new java.awt.Color(0, 0, 0));
+        jButton17.setText("√");
+        jPanel1.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 80, -1));
+
+        jButton18.setBackground(new java.awt.Color(255, 255, 255));
+        jButton18.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(0, 0, 0));
+        jButton18.setText("^");
+        jPanel1.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 80, -1));
+
+        jButton19.setBackground(new java.awt.Color(255, 255, 255));
+        jButton19.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(0, 0, 0));
+        jButton19.setText("%");
+        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 80, -1));
+
+        jButton20.setBackground(new java.awt.Color(255, 255, 255));
+        jButton20.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton20.setForeground(new java.awt.Color(0, 0, 0));
+        jButton20.setText("Borrar último");
+        jPanel1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 170, -1));
+
+        jTextField1.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("2");
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 130, -1));
+
+        jLabel3.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Resultado:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, -1, -1));
+
+        jLabel4.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel4.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("0.00");
+        jLabel4.setOpaque(true);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 330, 40));
+
+        jLabel5.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel5.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("0.00");
+        jLabel5.setOpaque(true);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 280, 40));
+
+        jLabel6.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Base de √ ó ^:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, -1, -1));
+
+        jLabel7.setBackground(new java.awt.Color(22, 22, 22));
+        jLabel7.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Regresar al menú principal");
+        jLabel7.setOpaque(true);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 190, 30));
+
+        jLabel8.setBackground(new java.awt.Color(22, 22, 22));
+        jLabel8.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Exit");
+        jLabel8.setOpaque(true);
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 70, 30));
+
+        jButton21.setBackground(new java.awt.Color(255, 255, 255));
+        jButton21.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(0, 0, 0));
+        jButton21.setText("π");
+        jPanel1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 80, -1));
+
+        jButton22.setBackground(new java.awt.Color(255, 255, 255));
+        jButton22.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
+        jButton22.setForeground(new java.awt.Color(0, 0, 0));
+        jButton22.setText("Borrar todo");
+        jPanel1.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 170, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+         System.exit(0); //Sales de todo el sistema
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+         JFMainPantalla  mainPantalla = new JFMainPantalla();
+         mainPantalla.setVisible(true);
+         mainPantalla.setLocationRelativeTo(null);
+        this.dispose(); //se cirran todas las ventanas actualles
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +320,36 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
