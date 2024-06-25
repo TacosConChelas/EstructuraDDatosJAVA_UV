@@ -387,7 +387,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jLTrigonometryMouseEntered
 
     private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
-       this.jLTrigonometry.setBackground(new java.awt.Color(0, 0, 0));
+       this.jLTrigonometry.setBackground(new java.awt.Color(22,22,22));
        
        
     }//GEN-LAST:event_jLTrigonometryMouseExited
