@@ -18,6 +18,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private int operacion = 0;
     private int base = 2;
     private boolean permiso;
+    public int pp;
     /**
      * Creates new form JFBasicCalculator
      */
@@ -43,43 +44,42 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     
     
     private void operaciones(int op, int base){
+        
         switch(op){       
-            case 0:
+            case 0: //suma
                 //se traen los valores actuales de ambos numeros que esten guardados y se suman, ademas de colocar el resultado en la 
-                this.setTotal(this.getTotal() + this.getNum1() + this.getNum2());  System.out.println("el num 1 " + this.getNum1());  System.out.println("el num 2 " + this.getNum2());
-                this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
+                this.setTotal(this.getTotal() + this.getNum1() + this.getNum2());  System.out.println("el num 1 " + this.getNum1());  
                
                 break;
-            case 1: //suma
+            case 1: //resta
                 if(this.getTotal() == 0){   
                            this.setTotal(this.getNum1() - this.getNum2());  
                            //
                 } else if (this.getTotal() != 0){       this.setTotal(this.getTotal() - this.getNum1() - this.getNum2());  }
-                
-                this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
                
                 break;
-            case 2: //resta
-                this.setTotal(this.getNum1() * this.getNum2());
+            case 2: //multiplicacion
+                 if(this.getTotal() == 0){   
+                           this.setTotal(this.getNum1() * this.getNum2());  
+                           //
+                } else if (this.getTotal() != 0){       this.setTotal(this.getTotal() * this.getNum1() * this.getNum2());  }
                 break;
-            case 3: //multiplicacion
+            case 3: //division
                 
                 break;
-            case 4: //division
+            case 4:  //porcentaje
                 
                 break;
-            case 5: //porcentaje
+            case 5: //raiz
                 
                 break;
-            case 6: //raiz
+            case 6:  //potencia
                 
                 break;
-            case 7: //potencia
-                
-                 break;
+            
             default:    System.out.println("Error en la seleccion de operaciones"); break;
         }
-    
+     this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
     
     }
 
@@ -284,6 +284,11 @@ public class JFBasicCalculator extends javax.swing.JFrame {
         jBMultiplicacion.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jBMultiplicacion.setForeground(new java.awt.Color(0, 0, 0));
         jBMultiplicacion.setText("x");
+        jBMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMultiplicacionActionPerformed(evt);
+            }
+        });
         jPanel1.add(jBMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 80, -1));
 
         jBSuma.setBackground(new java.awt.Color(255, 255, 255));
@@ -313,6 +318,11 @@ public class JFBasicCalculator extends javax.swing.JFrame {
         jBUltimoResultado.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 15)); // NOI18N
         jBUltimoResultado.setForeground(new java.awt.Color(0, 0, 0));
         jBUltimoResultado.setText("ANS");
+        jBUltimoResultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBUltimoResultadoActionPerformed(evt);
+            }
+        });
         jPanel1.add(jBUltimoResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 80, -1));
 
         jBBorrarUltimoNumero.setBackground(new java.awt.Color(255, 255, 255));
@@ -440,19 +450,18 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-         JFMainPantalla  mainPantalla = new JFMainPantalla();
-         mainPantalla.setVisible(true);
+         JFMainPantalla  mainPantalla = new JFMainPantalla();   mainPantalla.setVisible(true); //creamos el objeto pantalla main y la hacemos visible
          mainPantalla.setLocationRelativeTo(null);  //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jBBorrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarTodoActionPerformed
-        this.jLOperaciones.setText("");
+        this.jLOperaciones.setText(""); //se borra cualquier numero que haya estado 
         this.jLResultado.setText("0.00");   this.setTotal(0); this.setNum1(0); this.setNum2(0);
     }//GEN-LAST:event_jBBorrarTodoActionPerformed
 
     private void jBBorrarUltimoNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarUltimoNumeroActionPerformed
-       this.jLOperaciones.setText("");
+       this.jLOperaciones.setText("");  //se borra el numero que se haya escrito en pantalla
     }//GEN-LAST:event_jBBorrarUltimoNumeroActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -468,7 +477,6 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "3"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 3
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -554,7 +562,6 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                    this.jLOperaciones.setText("");  //limpiamos la pantalla de operaciones
                    
                    this.operaciones((int) this.getOperacion(), (int) this.getBase());  
-                   
                     this.setNum1(0); this.setNum2(0);//reiniciamos ambas varaibles por si acaso
                    
          } else if((this.getNum1() == 0) && (this.getNum2() == 0)){
@@ -563,6 +570,30 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                   
          }  
     }//GEN-LAST:event_jBRestaActionPerformed
+
+    private void jBUltimoResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimoResultadoActionPerformed
+       jLOperaciones.setText(jLResultado.getText());    //pasamos el numero del recuadro de resultado y lo ponemos en el reuadro de operaciones
+       jLResultado.setText("0.00"); //colocamos 0 en el cuadro del resultado
+       this.setNum1(0); this.setNum2(0); this.setTotal(0);
+    }//GEN-LAST:event_jBUltimoResultadoActionPerformed
+
+    private void jBMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMultiplicacionActionPerformed
+         this.setOperacion(2);
+           
+          if((this.getNum2() == 0) && (this.getNum1() != 0)){
+                   this.setNum2(Float.valueOf(this.jLOperaciones.getText()));
+                   this.jLOperaciones.setText("");  //limpiamos la pantalla de operaciones
+                   
+                   this.operaciones((int) this.getOperacion(), (int) this.getBase());  
+                    this.setNum1(0); this.setNum2(0);//reiniciamos ambas varaibles por si acaso
+                   
+         } else if((this.getNum1() == 0) && (this.getNum2() == 0)){
+                  this.setNum1(Float.valueOf(this.jLOperaciones.getText()));
+                  this.jLOperaciones.setText("");   //limpiamos la pantalla de operaciones
+                  
+         }  
+        
+    }//GEN-LAST:event_jBMultiplicacionActionPerformed
 
     /**
      * @param args the command line arguments
