@@ -85,6 +85,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLTrigonometry = new javax.swing.JLabel();
         jLCalculoDiferencial = new javax.swing.JLabel();
         jLCalculoIntegral = new javax.swing.JLabel();
+        jLBasicCientifica = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -167,7 +168,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLBasicCalculadoraMouseExited(evt);
             }
         });
-        jPanel3.add(jLBasicCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 167, 260, 36));
+        jPanel3.add(jLBasicCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 260, 36));
 
         jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
         jLGeometria.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -187,7 +188,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLGeometriaMouseExited(evt);
             }
         });
-        jPanel3.add(jLGeometria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 260, 36));
+        jPanel3.add(jLGeometria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 227, 260, 36));
 
         jLTrigonometry.setBackground(new java.awt.Color(22, 22, 22));
         jLTrigonometry.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -207,7 +208,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLTrigonometryMouseExited(evt);
             }
         });
-        jPanel3.add(jLTrigonometry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 232, 260, 36));
+        jPanel3.add(jLTrigonometry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 260, 36));
 
         jLCalculoDiferencial.setBackground(new java.awt.Color(22, 22, 22));
         jLCalculoDiferencial.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -227,7 +228,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLCalculoDiferencialMouseExited(evt);
             }
         });
-        jPanel3.add(jLCalculoDiferencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 266, 260, 36));
+        jPanel3.add(jLCalculoDiferencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 294, 260, 36));
 
         jLCalculoIntegral.setBackground(new java.awt.Color(22, 22, 22));
         jLCalculoIntegral.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -247,7 +248,27 @@ public class JFMainPantalla extends javax.swing.JFrame {
                 jLCalculoIntegralMouseExited(evt);
             }
         });
-        jPanel3.add(jLCalculoIntegral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 260, 36));
+        jPanel3.add(jLCalculoIntegral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 328, 260, 36));
+
+        jLBasicCientifica.setBackground(new java.awt.Color(22, 22, 22));
+        jLBasicCientifica.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLBasicCientifica.setForeground(new java.awt.Color(255, 255, 255));
+        jLBasicCientifica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLBasicCientifica.setText("Calculadora Científica");
+        jLBasicCientifica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLBasicCientifica.setOpaque(true);
+        jLBasicCientifica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLBasicCientificaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLBasicCientificaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLBasicCientificaMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLBasicCientifica, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 260, 36));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
 
@@ -426,6 +447,18 @@ public class JFMainPantalla extends javax.swing.JFrame {
         this.jLCalculoIntegral.setBackground(new java.awt.Color(22,22,22));
     }//GEN-LAST:event_jLCalculoIntegralMouseExited
 
+    private void jLBasicCientificaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLBasicCientificaMouseClicked
+
+    private void jLBasicCientificaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLBasicCientificaMouseEntered
+
+    private void jLBasicCientificaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLBasicCientificaMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -464,6 +497,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
+    private javax.swing.JLabel jLBasicCientifica;
     private javax.swing.JLabel jLCalculoDiferencial;
     private javax.swing.JLabel jLCalculoIntegral;
     private javax.swing.JLabel jLGeometria;

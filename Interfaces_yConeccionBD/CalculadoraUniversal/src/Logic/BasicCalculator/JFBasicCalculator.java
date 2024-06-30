@@ -12,10 +12,10 @@ import Logic.JFMainPantalla;
  */
 public class JFBasicCalculator extends javax.swing.JFrame {
 
-    private double total = 0;
-    private double num1 = 0;
-    private double num2 = 0;
-    private int operacion = 0;
+    private Double total;
+    private Double num1;
+    private Double num2;
+    private int operacion;
     private int base = 2;
     private boolean permiso;
     public int pp;
@@ -28,18 +28,18 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }
     
     //Metodos GETTERS y SETTERS
-    public void setTotal(double t){     this.total = t;     }  
-    public void setNum1(double n){     this.num1 = n;    }
-    public void setNum2(double n){     this.num2 = n;    }
+    public void setTotal(Double t){     this.total = t;     }  
+    public void setNum1(Double n){     this.num1 = n;    }
+    public void setNum2(Double n){     this.num2 = n;    }
     public void setOperacion(int op){       this.operacion = op;    }
     public void setBase(int b){     this.base = b;      }
     
     
     
-    public double getTotal(){       return this.total;}
-    public double getNum1(){     return this.num1;        }
-    public double getNum2(){     return this.num2;        }
-    public double getOperacion(){       return this.operacion;}
+    public Double getTotal(){       return this.total;}
+    public Double getNum1(){     return this.num1;        }
+    public Double getNum2(){     return this.num2;        }
+    public int getOperacion(){       return this.operacion;}
     public int getBase(){      return this.base;}
     
     
@@ -49,8 +49,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
             case 0: //suma
                 //se traen los valores actuales de ambos numeros que esten guardados y se suman, ademas de colocar el resultado en la 
                 this.setTotal(this.getTotal() + this.getNum1() + this.getNum2());  System.out.println("el num 1 " + this.getNum1());  
-               
-                break;
+               break;
             case 1: //resta
                 if(this.getTotal() == 0){   
                            this.setTotal(this.getNum1() - this.getNum2());  
@@ -76,12 +75,14 @@ public class JFBasicCalculator extends javax.swing.JFrame {
             case 6:  //potencia
                 
                 break;
+            case 7: System.out.println("caso  7"); this.setTotal(this.getNum1());
             
             default:    System.out.println("Error en la seleccion de operaciones"); break;
         }
      this.jLResultado.setText(this.getTotal() + ""); //se va a colocar el resultado previamente guardado
     
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -457,7 +458,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
 
     private void jBBorrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarTodoActionPerformed
         this.jLOperaciones.setText(""); //se borra cualquier numero que haya estado 
-        this.jLResultado.setText("0.00");   this.setTotal(0); this.setNum1(0); this.setNum2(0);
+        this.jLResultado.setText("0.00");   this.setTotal(null); this.setNum1(null); this.setNum2(null);
     }//GEN-LAST:event_jBBorrarTodoActionPerformed
 
     private void jBBorrarUltimoNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarUltimoNumeroActionPerformed
@@ -467,46 +468,55 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jLOperaciones.setText(jLOperaciones.getText() + "1"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 1
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "2"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 2
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "3"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 3
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         jLOperaciones.setText(jLOperaciones.getText() + "4"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 4
+       
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "5"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 5
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         jLOperaciones.setText(jLOperaciones.getText() + "6"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 6
+       
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "7"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 7
+        this.multi(7);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "8"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 8
+        this.multi(8);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
          jLOperaciones.setText(jLOperaciones.getText() + "9"); 
         //Se coloca el texto, pero previamente se obtiene el texto que este en el recuadro y se le va a concatenar 9
+        this.multi(9);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -526,6 +536,8 @@ public class JFBasicCalculator extends javax.swing.JFrame {
 
     private void jBSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSumaActionPerformed
         this.setOperacion(0);
+        Integer p1 = 22;
+        p1 =  null;
            
           if((this.getNum2() == 0) && (this.getNum1() != 0)){
                    this.setNum2(Float.valueOf(this.jLOperaciones.getText()));
@@ -593,8 +605,23 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                   
          }  
         
+          
     }//GEN-LAST:event_jBMultiplicacionActionPerformed
 
+     public void multi(double num2){
+        if((this.getNum1() !=  0)  && (this.getNum2() == 0) && this.getOperacion() == 2){
+                this.setOperacion(7);
+                num2 *= this.getNum1();
+                this.setNum1(num2);
+                //this.jLOperaciones.setText("");
+                
+        
+        }
+         
+        
+        
+    
+    }
     /**
      * @param args the command line arguments
      */
