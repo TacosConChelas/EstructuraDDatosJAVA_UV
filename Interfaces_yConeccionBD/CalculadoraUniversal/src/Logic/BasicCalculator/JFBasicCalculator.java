@@ -52,14 +52,14 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                 this.setTotal(this.getTotal() + this.getNum1() + this.getNum2());  System.out.println("el num 1 " + this.getNum1());  
                break;
             case 1: //resta
-                if(this.getTotal() == 0){   
+                if(this.getTotal() == null){   
                            this.setTotal(this.getNum1() - this.getNum2());  
                            //
-                } else if (this.getTotal() != 0){       this.setTotal(this.getTotal() - this.getNum1() - this.getNum2());  }
+                } else if (this.getTotal() != null){       this.setTotal(this.getTotal() - this.getNum1() - this.getNum2());  }
                
                 break;
             case 2: //multiplicacion
-                 if(this.getTotal() == null){   this.setTotal(0.0); } 
+                 if(this.getTotal() == null){   this.setTotal(1.0); } 
                  
                  this.setTotal(this.getTotal() * this.getNum1() * this.getNum2()); 
                 break;
@@ -535,18 +535,20 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jBSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSumaActionPerformed
+        this.multi_Y_Divicion(Double.valueOf(jLOperaciones.getText()));
+        
         this.setOperacion(0);
        
            
-          if((this.getNum2().equals(null)) && (! this.getNum1().equals(null))){
+          if((this.getNum2() == null ) && ( this.getNum1() != null)){
                    this.setNum2(Double.valueOf(this.jLOperaciones.getText()));
                    this.jLOperaciones.setText("");  //limpiamos la pantalla de operaciones
                    
-                   this.operaciones((int) this.getOperacion(), (int) this.getBase());  
+                   this.operaciones((int) this.getOperacion(), (int) this.getBase());  //
                    
                     this.setNum1(null); this.setNum2(null);//reiniciamos ambas varaibles por si acaso
                    
-         } else if((this.getNum1().equals(null)) && this.getNum2().equals(null)){
+         } else if((this.getNum1() == null ) && this.getNum2() == null){
                   this.setNum1(Double.valueOf(this.jLOperaciones.getText()));
                   this.jLOperaciones.setText("");   //limpiamos la pantalla de operaciones
                   
@@ -555,8 +557,13 @@ public class JFBasicCalculator extends javax.swing.JFrame {
 
     private void jBIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIgualActionPerformed
        
-       this.setNum2(Double.valueOf(this.jLOperaciones.getText()));
-       this.operaciones((int) this.getOperacion(), (int) this.getBase());  
+       if(this.getNum1() != null){
+            this.setNum2(Double.valueOf(this.jLOperaciones.getText()));
+            
+       
+       } 
+         this.operaciones((int) this.getOperacion(), (int) this.getBase());    
+      
        //reiniciamos ambas varaibles por si acaso
       
        this.setNum2(null); this.setNum2(null);
@@ -566,16 +573,18 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jBIgualActionPerformed
 
     private void jBRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRestaActionPerformed
+        this.multi_Y_Divicion(Double.valueOf(jLOperaciones.getText()));
         this.setOperacion(1);
            
-          if((this.getNum2() == 0) && (this.getNum1() != 0)){
+          if((this.getNum2() == null) && (this.getNum1() != null)){
                    this.setNum2(Double.valueOf(this.jLOperaciones.getText()));
-                   this.jLOperaciones.setText("");  //limpiamos la pantalla de operaciones
-                   
+                  
+                   System.out.println("se hace  la resta");
                    this.operaciones((int) this.getOperacion(), (int) this.getBase());  
                     this.setNum1(null); this.setNum2(null);//reiniciamos ambas varaibles por si acaso
+                     this.jLOperaciones.setText("");  //limpiamos la pantalla de operaciones
                    
-         } else if((this.getNum1().equals(null)) && (this.getNum2().equals(null))){
+         } else if((this.getNum1() == null) && (this.getNum2() == null)){
                   this.setNum1(Double.valueOf(this.jLOperaciones.getText()));
                   this.jLOperaciones.setText("");   //limpiamos la pantalla de operaciones
                   
@@ -608,13 +617,16 @@ public class JFBasicCalculator extends javax.swing.JFrame {
           
     }//GEN-LAST:event_jBMultiplicacionActionPerformed
 
-     public void multi(Double num2){
-        if((! this.getNum1().equals(null))  && (this.getNum2().equals(null)) && this.getOperacion() == 2){
+     public void multi_Y_Divicion(Double num2){
+        if((this.getNum1() != null)  && (this.getNum2() == null) && (this.getOperacion() == 2)){
                 this.setOperacion(7);
                 num2 *= this.getNum1();
                 this.setNum1(num2);
-                //this.jLOperaciones.setText("");
+                //this.jLOperaciones.setText(this.getNum1() + "");
+                this.jLResultado.setText(this.getNum1() + "");  System.out.println("numero colocado");
                 
+        } else if( (this.getNum1() != null)  && (this.getNum2() == null) && this.getOperacion() == 3 ){
+           
         
         }
     }
