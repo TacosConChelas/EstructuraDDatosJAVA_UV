@@ -52,10 +52,18 @@ public class JFBasicCalculator extends javax.swing.JFrame {
                 this.setTotal(this.getTotal() + this.getNum1() + this.getNum2());  System.out.println("el num 1 " + this.getNum1());  
                break;
             case 1: //resta
+                System.out.println("resta");
                 if(this.getTotal() == null){   
                            this.setTotal(this.getNum1() - this.getNum2());  
                            //
-                } else if (this.getTotal() != null){       this.setTotal(this.getTotal() - this.getNum1() - this.getNum2());  }
+                } else if (this.getTotal() != null){       
+                    if((this.getNum1() != null) && (this.getNum2() != null)){
+                        this.setTotal(this.getTotal() - this.getNum1() - this.getNum2()); 
+                    
+                    }
+                     
+                }
+                
                
                 break;
             case 2: //multiplicacion
@@ -83,7 +91,20 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     
     }
    
-
+public void suma(Double... values){
+    for(Double value : values){
+        byte contador = 1;
+        Double pibote =  this.getTotal();
+          try{
+                if(value  == this.getTotal()){      pibote = 0.0;                }
+                
+                this.setTotal((pibote + value));
+            
+          } catch (Exception e){  System.out.println("El valor de la variable numero " + contador + "es  NULL");}
+    
+    }
+        
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -575,7 +596,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     private void jBRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRestaActionPerformed
         this.multi_Y_Divicion(Double.valueOf(jLOperaciones.getText()));
         this.setOperacion(1);
-           
+          
           if((this.getNum2() == null) && (this.getNum1() != null)){
                    this.setNum2(Double.valueOf(this.jLOperaciones.getText()));
                   
@@ -587,8 +608,9 @@ public class JFBasicCalculator extends javax.swing.JFrame {
          } else if((this.getNum1() == null) && (this.getNum2() == null)){
                   this.setNum1(Double.valueOf(this.jLOperaciones.getText()));
                   this.jLOperaciones.setText("");   //limpiamos la pantalla de operaciones
-                  
+                  System.out.println("caso 1 resta");
          }  
+          System.out.println("el numero 1 " + this.getNum1() + " y el 2 es " + this.getNum2());
     }//GEN-LAST:event_jBRestaActionPerformed
 
     private void jBUltimoResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimoResultadoActionPerformed
@@ -611,7 +633,7 @@ public class JFBasicCalculator extends javax.swing.JFrame {
          } else if((this.getNum1() == null ) && this.getNum2() == null){
                   this.setNum1(Double.valueOf(this.jLOperaciones.getText()));
                   this.jLOperaciones.setText("");   //limpiamos la pantalla de operaciones
-                  
+                  System.out.println("Caso 1 multi");
          }  
         
           
@@ -620,10 +642,10 @@ public class JFBasicCalculator extends javax.swing.JFrame {
      public void multi_Y_Divicion(Double num2){
         if((this.getNum1() != null)  && (this.getNum2() == null) && (this.getOperacion() == 2)){
                 this.setOperacion(7);
-                num2 *= this.getNum1();
-                this.setNum1(num2);
+                num2 *= this.getNum1(); this.setNum1(null);
+                this.setTotal(num2); ; System.out.println("el 1 es " +  this.getNum1() );
                 //this.jLOperaciones.setText(this.getNum1() + "");
-                this.jLResultado.setText(this.getNum1() + "");  System.out.println("numero colocado");
+                this.jLResultado.setText(this.getTotal() + "");  System.out.println("numero colocado");
                 
         } else if( (this.getNum1() != null)  && (this.getNum2() == null) && this.getOperacion() == 3 ){
            
