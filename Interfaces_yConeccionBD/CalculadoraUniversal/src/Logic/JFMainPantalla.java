@@ -85,9 +85,11 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLTrigonometry = new javax.swing.JLabel();
         jLCalculoDiferencial = new javax.swing.JLabel();
         jLCalculoIntegral = new javax.swing.JLabel();
-        jLBasicCientifica = new javax.swing.JLabel();
+        jLCalculadoraCientifica = new javax.swing.JLabel();
+        jLCalculadoraFisica = new javax.swing.JLabel();
+        jLCalculadoraQuimica = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLExit = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTAMessage = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
@@ -142,13 +144,13 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Calculadora");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 65, 215, -1));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 215, -1));
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 28)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Universal");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 116, 215, -1));
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 215, -1));
 
         jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
         jLBasicCalculadora.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
@@ -250,25 +252,65 @@ public class JFMainPantalla extends javax.swing.JFrame {
         });
         jPanel3.add(jLCalculoIntegral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 328, 260, 36));
 
-        jLBasicCientifica.setBackground(new java.awt.Color(22, 22, 22));
-        jLBasicCientifica.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
-        jLBasicCientifica.setForeground(new java.awt.Color(255, 255, 255));
-        jLBasicCientifica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLBasicCientifica.setText("Calculadora Científica");
-        jLBasicCientifica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jLBasicCientifica.setOpaque(true);
-        jLBasicCientifica.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLCalculadoraCientifica.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculadoraCientifica.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculadoraCientifica.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculadoraCientifica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculadoraCientifica.setText("Calculadora Científica");
+        jLCalculadoraCientifica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculadoraCientifica.setOpaque(true);
+        jLCalculadoraCientifica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLBasicCientificaMouseClicked(evt);
+                jLCalculadoraCientificaMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLBasicCientificaMouseEntered(evt);
+                jLCalculadoraCientificaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLBasicCientificaMouseExited(evt);
+                jLCalculadoraCientificaMouseExited(evt);
             }
         });
-        jPanel3.add(jLBasicCientifica, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 260, 36));
+        jPanel3.add(jLCalculadoraCientifica, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 260, 36));
+
+        jLCalculadoraFisica.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculadoraFisica.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculadoraFisica.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculadoraFisica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculadoraFisica.setText("Física");
+        jLCalculadoraFisica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculadoraFisica.setOpaque(true);
+        jLCalculadoraFisica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLCalculadoraFisicaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLCalculadoraFisicaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLCalculadoraFisicaMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLCalculadoraFisica, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 362, 260, 36));
+
+        jLCalculadoraQuimica.setBackground(new java.awt.Color(22, 22, 22));
+        jLCalculadoraQuimica.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 12)); // NOI18N
+        jLCalculadoraQuimica.setForeground(new java.awt.Color(255, 255, 255));
+        jLCalculadoraQuimica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCalculadoraQuimica.setText("Química");
+        jLCalculadoraQuimica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLCalculadoraQuimica.setOpaque(true);
+        jLCalculadoraQuimica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLCalculadoraQuimicaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLCalculadoraQuimicaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLCalculadoraQuimicaMouseExited(evt);
+            }
+        });
+        jPanel3.add(jLCalculadoraQuimica, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 396, 260, 36));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
 
@@ -281,19 +323,19 @@ public class JFMainPantalla extends javax.swing.JFrame {
         jLabel5.setOpaque(true);
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 470, -1));
 
-        jLabel11.setBackground(new java.awt.Color(40, 40, 40));
-        jLabel11.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Exit");
-        jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        jLabel11.setOpaque(true);
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLExit.setBackground(new java.awt.Color(40, 40, 40));
+        jLExit.setFont(new java.awt.Font("Hack Nerd Font Mono", 0, 10)); // NOI18N
+        jLExit.setForeground(new java.awt.Color(255, 255, 255));
+        jLExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLExit.setText("Exit");
+        jLExit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jLExit.setOpaque(true);
+        jLExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
+                jLExitMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 60, 30));
+        jPanel2.add(jLExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 60, 30));
 
         jTAMessage.setBackground(new java.awt.Color(41, 41, 41));
         jTAMessage.setColumns(20);
@@ -368,10 +410,10 @@ public class JFMainPantalla extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+    private void jLExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLExitMouseClicked
         //Se ejecuta cuando el usuario da clic en el boton de salir
         System.exit(0);
-    }//GEN-LAST:event_jLabel11MouseClicked
+    }//GEN-LAST:event_jLExitMouseClicked
 
     private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
         JFCalculatorGeometry geometry = new JFCalculatorGeometry();
@@ -389,8 +431,8 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private void jLGeometriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseExited
          this.jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
          
-         
-            
+         //Ademas de esto, volvera a mostrar el mensaje general
+        this.message(0);
     }//GEN-LAST:event_jLGeometriaMouseExited
 
     private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
@@ -406,13 +448,13 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
         this.jLTrigonometry.setBackground(new java.awt.Color(0, 0, 0));
         
-        
     }//GEN-LAST:event_jLTrigonometryMouseEntered
 
     private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
        this.jLTrigonometry.setBackground(new java.awt.Color(22,22,22));
        
-       
+        //Ademas de esto, volvera a mostrar el mensaje general
+        this.message(0);
     }//GEN-LAST:event_jLTrigonometryMouseExited
 
     private void jLCalculoDiferencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseClicked
@@ -430,6 +472,9 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
     private void jLCalculoDiferencialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseExited
         this.jLCalculoDiferencial.setBackground(new java.awt.Color(22,22,22));
+        
+         
+        this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLCalculoDiferencialMouseExited
 
     private void jLCalculoIntegralMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseClicked
@@ -445,19 +490,58 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
     private void jLCalculoIntegralMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseExited
         this.jLCalculoIntegral.setBackground(new java.awt.Color(22,22,22));
+        
+        
+         this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLCalculoIntegralMouseExited
 
-    private void jLBasicCientificaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseClicked
+    private void jLCalculadoraCientificaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraCientificaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLBasicCientificaMouseClicked
+        
+        
+    }//GEN-LAST:event_jLCalculadoraCientificaMouseClicked
 
-    private void jLBasicCientificaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseEntered
+    private void jLCalculadoraCientificaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraCientificaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLBasicCientificaMouseEntered
+        this.jLCalculadoraCientifica.setBackground(new java.awt.Color(0, 0, 0));
+        
+         
+    }//GEN-LAST:event_jLCalculadoraCientificaMouseEntered
 
-    private void jLBasicCientificaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCientificaMouseExited
+    private void jLCalculadoraCientificaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraCientificaMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLBasicCientificaMouseExited
+        this.jLCalculadoraCientifica.setBackground(new java.awt.Color(22,22,22));
+        
+        this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
+    }//GEN-LAST:event_jLCalculadoraCientificaMouseExited
+
+    private void jLCalculadoraFisicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculadoraFisicaMouseClicked
+
+    private void jLCalculadoraFisicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculadoraFisicaMouseEntered
+
+    private void jLCalculadoraFisicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseExited
+        // TODO add your handling code here:
+        
+        this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
+    }//GEN-LAST:event_jLCalculadoraFisicaMouseExited
+
+    private void jLCalculadoraQuimicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculadoraQuimicaMouseClicked
+
+    private void jLCalculadoraQuimicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLCalculadoraQuimicaMouseEntered
+
+    private void jLCalculadoraQuimicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseExited
+        // TODO add your handling code here:
+        
+        this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
+    }//GEN-LAST:event_jLCalculadoraQuimicaMouseExited
 
     /**
      * @param args the command line arguments
@@ -497,14 +581,16 @@ public class JFMainPantalla extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
-    private javax.swing.JLabel jLBasicCientifica;
+    private javax.swing.JLabel jLCalculadoraCientifica;
+    private javax.swing.JLabel jLCalculadoraFisica;
+    private javax.swing.JLabel jLCalculadoraQuimica;
     private javax.swing.JLabel jLCalculoDiferencial;
     private javax.swing.JLabel jLCalculoIntegral;
+    private javax.swing.JLabel jLExit;
     private javax.swing.JLabel jLGeometria;
     private javax.swing.JLabel jLToday;
     private javax.swing.JLabel jLTrigonometry;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

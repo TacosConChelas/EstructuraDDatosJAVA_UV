@@ -92,16 +92,17 @@ public class JFBasicCalculator extends javax.swing.JFrame {
     }
    
 public void suma(Double... values){
+    byte c= 1;
+    Double pibote =  0.0;
     for(Double value : values){
-        byte contador = 1;
-        Double pibote =  this.getTotal();
+        
           try{
-                if(value  == this.getTotal()){      pibote = 0.0;                }
+               pibote = (value  == this.getTotal())?  0.0  :  this.getTotal();
                 
                 this.setTotal((pibote + value));
             
-          } catch (Exception e){  System.out.println("El valor de la variable numero " + contador + "es  NULL");}
-    
+          } catch (Exception e){  System.out.println("El valor de la variable numero " + c + "es  NULL");}
+          c++;
     }
         
 }
