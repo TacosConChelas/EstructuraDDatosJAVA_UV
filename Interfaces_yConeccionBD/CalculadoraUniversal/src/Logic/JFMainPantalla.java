@@ -28,8 +28,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }
 
     public static String date(){
-        //Se crea un objeto apartir de la clase Date()
-        Date date = new Date();     
+        Date date = new Date();   //Se crea un objeto apartir de la clase Date()
         return date.toString(); //Se devuelve el objeto usando .toString() para convertir la fehca en un texto
     }
      private void message(int option){
@@ -38,10 +37,10 @@ public class JFMainPantalla extends javax.swing.JFrame {
                   case 0:   //mensaje general
                            
                            mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente. Al costado derecho podran encontrar las " 
-                                   +        "\n  diferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas," 
-                                   +        "\n  ademas de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
+                                   +        "\n  diferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas, ademas" 
+                                   +        "\n  de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
                                    +        "\n \nSi decea conocer el codigo fuente puede consultar el repositorio en el cual se encuentra, ademas de otros proyectos hechos por el mismo creador: "
-                                   +        "\nRepositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main";
+                                   +        "\n  https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main";
                            break;
                   case 1:   //mensaje para la calculadora basica
                            
@@ -49,23 +48,23 @@ public class JFMainPantalla extends javax.swing.JFrame {
                                     +       " mas y la constante PI: \n   1) Raiz (√) \n   2) Porcentaje (%) \n   3) Potencia (^) \n   4) PI (π)";
                            break;
                   case 2:   //mensaje  para la calculadora de cientifica
-                            
-                            mensaje = "";
+                           mensaje = "";
                            break;
                   case 3:  //mensaje paral a calculadora de trigonometria
-                           
                            mensaje = "";
                            break;
                   case 4:   //mensaje paral a calculadora de geometria
-                           
+                           mensaje = "Esta es una herramienta orientada a estudiantes que buscanuna herramienta completa y precisa en la resolución de problemas geométricos.Desarrollada en Java, esta" 
+                                    +       "\n  calculadora abarca una amplia gama de funcionalidades, desde la geometría plana y del espacio hasta la geometría analítica. Puedes calcular áreas, perímetros" 
+                                    +       "\n  y volúmenes de figuras como triángulos, cuadrados, rectángulos, círculos, polígonos regulares, cubos, esferas, cilindros y conos. Además, permite resolver ecuaciones " 
+                                    +       "\n  de rectas, circunferencias, elipses e hipérbolas, así como calcular distancias entre puntos en el plano cartesiano. Esta herramienta es indispensable para tareas " 
+                                    +       "\n  académicas, enseñanza eficiente y aplicaciones prácticas en ingeniería y diseño, ofreciendo una solución ideal para todas tus necesidades geométricas.";
+                           break;
+                  case 5:    //mensaje paral a calculadora de calculo diferencial
+                          
                            mensaje = "";
                            break;
-                  case 5: 
-                           //mensaje paral a calculadora de calculo diferencial
-                           mensaje = "";
-                           break;
-                  case 6: 
-                           //mensaje paral a calculadora de calculo integral
+                  case 6:    //mensaje paral a calculadora de calculo integral
                            mensaje = "";
                            break;
                   case 7: 
@@ -75,9 +74,10 @@ public class JFMainPantalla extends javax.swing.JFrame {
                                    +       "\n  de cinemática y dinámica,calcular energía y momento, y analizar colisiones. En termodinámica, permite trabajar con la ley de los gases ideales y las leyes de la "   
                                    +       "\n  termodinámica,  mientras que en electromagnetismo incluye cálculos basados en la ley de Coulomb, campos eléctricos, la ley de Faraday y la ley de Ohm. Para óptica, " 
                                    +       "\n  la calculadora maneja la ley de Snell, la ecuación de lentes delgadas y magnificación. En el ámbito de la física moderna, aborda problemas de relatividad especial y" 
-                                   +       "\n  mecánica cuántica, incluyendo la ecuación de Schrödinger. Finalmente, en astronomía y astrofísica, permite utilizar la ley de Hubble y calcular magnitudes estelares.Esta" 
-                                   +       "\n  calculadora no solo facilita la resolución de complejos problemas físicos sino que también incluye herramientas adicionales como conversión de unidades y gráficos"  
-                                   +       "\n  interactivos, siendo una buena herramientta para el estudio y la páctica en la física.";
+                                   +       "\n  mecánica cuántica, incluyendo la ecuación de Schrödinger. " 
+                                   +       "\n  \nFinalmente, en astronomía y astrofísica, permite utilizar la ley de Hubble y calcular magnitudes estelares.Esta calculadora no solo facilita la resolución de complejos "  
+                                   +       "\n  problemas físicos sino que también incluye herramientas adicionales como conversión de unidades y gráficos interactivos, siendo una buena herramientta para el estudio" 
+                                   +       "\n  y la páctica en la física.";
                            break;
                   case 8: 
                            //mensaje paral a calculadora de quimica
@@ -436,34 +436,31 @@ public class JFMainPantalla extends javax.swing.JFrame {
         //Se crea un objeto apartir de la clase JFBasicCalculator
         JFBasicCalculator basicC = new JFBasicCalculator();
         basicC.setVisible(true);    //Se hace visible
-        basicC.setLocationRelativeTo(null);
+        basicC.setLocationRelativeTo(null); //coloca la ventanan en el centro de la pantalla 
         this.dispose(); //se cirran todas las ventanas actualles
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
 
     private void jLExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLExitMouseClicked
-        //Se ejecuta cuando el usuario da clic en el boton de salir
-        System.exit(0);
+        System.exit(0); //Se ejecuta cuando el usuario da clic en el boton de salir
     }//GEN-LAST:event_jLExitMouseClicked
 
     private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
         JFCalculatorGeometry geometry = new JFCalculatorGeometry();
-        geometry.setVisible(true);
+        geometry.setVisible(true);  //muestra la pantalla
         geometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLGeometriaMouseClicked
 
     private void jLGeometriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseEntered
          this.jLGeometria.setBackground(new java.awt.Color(0, 0, 0));
-         
+         this.message(4);
          
     }//GEN-LAST:event_jLGeometriaMouseEntered
 
     private void jLGeometriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseExited
          this.jLGeometria.setBackground(new java.awt.Color(22, 22, 22));
-         
-         //Ademas de esto, volvera a mostrar el mensaje general
-        this.message(0);
+        this.message(0);         //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLGeometriaMouseExited
 
     private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
