@@ -35,25 +35,56 @@ public class JFMainPantalla extends javax.swing.JFrame {
      private void message(int option){
         String mensaje = " ";
         switch(option){
-                  case 0:
-                           //mensaje general
+                  case 0:   //mensaje general
+                           
                            mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente. Al costado derecho podran encontrar las " 
-                                   +        "\ndiferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas," 
-                                   +        "\nademas de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
+                                   +        "\n  diferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas," 
+                                   +        "\n  ademas de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
                                    +        "\n \nSi decea conocer el codigo fuente puede consultar el repositorio en el cual se encuentra, ademas de otros proyectos hechos por el mismo creador: "
                                    +        "\nRepositorio: https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main";
                            break;
-                  case 1:
-                           //mensaje para la calculadora basica
-                           mensaje = "Esta calculadora cuenta con las operaciones basicas, estas son: \n1) Suma (+) \n2) Resta (-) \n3) Multiplicacion (x) \n4) Divicion (÷) \nIncluimos 3 operaciones"
-                                    +       " mas y la constante PI: \n1) Raiz (√) \n2) Porcentaje (%) \n3) Potencia (^) \n4) PI (π)";
+                  case 1:   //mensaje para la calculadora basica
+                           
+                           mensaje = "Esta calculadora cuenta con las operaciones basicas, estas son: \n   1) Suma (+) \n   2) Resta (-) \n   3) Multiplicacion (x) \n   4) Divicion (÷) \nIncluimos 3 operaciones"
+                                    +       " mas y la constante PI: \n   1) Raiz (√) \n   2) Porcentaje (%) \n   3) Potencia (^) \n   4) PI (π)";
                            break;
-                  case 2:
-                            //mensaje  para la calculadora de trigonometria
+                  case 2:   //mensaje  para la calculadora de cientifica
+                            
                             mensaje = "";
                            break;
-                  case 3: 
-                           //mensaje paral a calculadora de geometria
+                  case 3:  //mensaje paral a calculadora de trigonometria
+                           
+                           mensaje = "";
+                           break;
+                  case 4:   //mensaje paral a calculadora de geometria
+                           
+                           mensaje = "";
+                           break;
+                  case 5: 
+                           //mensaje paral a calculadora de calculo diferencial
+                           mensaje = "";
+                           break;
+                  case 6: 
+                           //mensaje paral a calculadora de calculo integral
+                           mensaje = "";
+                           break;
+                  case 7: 
+                           //mensaje paral a calculadora de fisica
+                           mensaje = "La calculadora de física avanzada que presentamos está diseñada para ser una herramienta integral para estudiantes, profesores e investigadores en diversas ramas de la" 
+                                   +       "\n  física.Con funcionalidades que abarcan desde la mecánica clásica hasta la física moderna y la astrofísica, esta calculadora ofrece la capacidad de resolver problemas" 
+                                   +       "\n  de cinemática y dinámica,calcular energía y momento, y analizar colisiones. En termodinámica, permite trabajar con la ley de los gases ideales y las leyes de la "   
+                                   +       "\n  termodinámica,  mientras que en electromagnetismo incluye cálculos basados en la ley de Coulomb, campos eléctricos, la ley de Faraday y la ley de Ohm. Para óptica, " 
+                                   +       "\n  la calculadora maneja la ley de Snell, la ecuación de lentes delgadas y magnificación. En el ámbito de la física moderna, aborda problemas de relatividad especial y" 
+                                   +       "\n  mecánica cuántica, incluyendo la ecuación de Schrödinger. Finalmente, en astronomía y astrofísica, permite utilizar la ley de Hubble y calcular magnitudes estelares.Esta" 
+                                   +       "\n  calculadora no solo facilita la resolución de complejos problemas físicos sino que también incluye herramientas adicionales como conversión de unidades y gráficos"  
+                                   +       "\n  interactivos, siendo una buena herramientta para el estudio y la páctica en la física.";
+                           break;
+                  case 8: 
+                           //mensaje paral a calculadora de quimica
+                           mensaje = "";
+                           break;
+                  case 9: 
+                           //mensaje paral a calculadora de
                            mensaje = "";
                            break;
                   default:      System.out.println("Error en la seleccion  del menaje");    break;
@@ -517,15 +548,18 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
     private void jLCalculadoraFisicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseClicked
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jLCalculadoraFisicaMouseClicked
 
     private void jLCalculadoraFisicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseEntered
         // TODO add your handling code here:
+        this.jLCalculadoraFisica.setBackground(new java.awt.Color(0, 0, 0));
+        this.message(7);
     }//GEN-LAST:event_jLCalculadoraFisicaMouseEntered
 
     private void jLCalculadoraFisicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraFisicaMouseExited
         // TODO add your handling code here:
-        
+        this.jLCalculadoraFisica.setBackground(new java.awt.Color(22 ,22, 22));
         this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLCalculadoraFisicaMouseExited
 
@@ -535,11 +569,13 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
     private void jLCalculadoraQuimicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseEntered
         // TODO add your handling code here:
+        this.jLCalculadoraQuimica.setBackground(new java.awt.Color(0, 0, 0));
+        
     }//GEN-LAST:event_jLCalculadoraQuimicaMouseEntered
 
     private void jLCalculadoraQuimicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseExited
         // TODO add your handling code here:
-        
+        this.jLCalculadoraQuimica.setBackground(new java.awt.Color(22, 22, 22));
         this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLCalculadoraQuimicaMouseExited
 
