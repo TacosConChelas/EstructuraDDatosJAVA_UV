@@ -35,7 +35,6 @@ public class JFMainPantalla extends javax.swing.JFrame {
         String mensaje = " ";
         switch(option){
                   case 0:   //mensaje general
-                           
                            mensaje = "Este es una pequeño programa que recopila diferentes tipos de calculadoras, cada una cumpliendo con un proposito diferente. Al costado derecho podran encontrar las " 
                                    +        "\n  diferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas, ademas" 
                                    +        "\n  de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
@@ -51,17 +50,24 @@ public class JFMainPantalla extends javax.swing.JFrame {
                            mensaje = "";
                            break;
                   case 3:  //mensaje paral a calculadora de trigonometria
-                           mensaje = "";
+                           mensaje = "Presentamos nuestra calculadora de trigonometría, diseñada para proporcionar soluciones precisas y rápidas a una amplia gama de problemas trigonométricos. Esta " 
+                                   +        "\n  herramienta integral, desarrollada en Java, permite calcular valores de las funciones trigonométricas básicas (seno, coseno, tangente, cotangente, secante y cosecante)" 
+                                   +       "\n  y sus inversas. Integra las identidades trigonométricas fundamentales, como Sin^2 θ + Cos^2 θ = 1, y las identidades de suma, diferencia, ángulos dobles y medios." 
+                                   +       "\n  También incluye aplicaciones en triángulos, utilizando la ley de senos y la ley de cosenos, así como el cálculo del área de un triángulo. La calculadora facilita la " 
+                                   +       "\n  conversión entre grados y radianes, y ofrece coordenadas en el círculo unitario. " 
+                                   +       "\n  \nAdemás, incorpora la fórmula de Euler y la representación polar de números complejos, así como series de Fourier para expansiones periódicas. Es ideal para " 
+                                   +       "\n  aplicaciones prácticas en ondas y oscilaciones, proporcionando amplitud, frecuencia y fase de ondas sinusoidales, y la resolución de ecuaciones trigonométricas. Esta " 
+                                   +       "\n  herramienta es esencial para estudiantes, profesores y profesionales que requieren precisión y eficiencia en sus cálculos trigonométricos.";
                            break;
                   case 4:   //mensaje paral a calculadora de geometria
                            mensaje = "Esta es una herramienta orientada a estudiantes que buscanuna herramienta completa y precisa en la resolución de problemas geométricos.Desarrollada en Java, esta" 
                                     +       "\n  calculadora abarca una amplia gama de funcionalidades, desde la geometría plana y del espacio hasta la geometría analítica. Puedes calcular áreas, perímetros" 
                                     +       "\n  y volúmenes de figuras como triángulos, cuadrados, rectángulos, círculos, polígonos regulares, cubos, esferas, cilindros y conos. Además, permite resolver ecuaciones " 
-                                    +       "\n  de rectas, circunferencias, elipses e hipérbolas, así como calcular distancias entre puntos en el plano cartesiano. Esta herramienta es indispensable para tareas " 
-                                    +       "\n  académicas, enseñanza eficiente y aplicaciones prácticas en ingeniería y diseño, ofreciendo una solución ideal para todas tus necesidades geométricas.";
+                                    +       "\n  de rectas, circunferencias, elipses e hipérbolas, así como calcular distancias entre puntos en el plano cartesiano. " 
+                                    +       "\n  \nEsta herramienta es indispensable para tareas académicas, enseñanza eficiente y aplicaciones prácticas en ingeniería y diseño, ofreciendo una solución ideal para " 
+                                   +        "\n  todas tus necesidades geométricas. ";
                            break;
                   case 5:    //mensaje paral a calculadora de calculo diferencial
-                          
                            mensaje = "";
                            break;
                   case 6:    //mensaje paral a calculadora de calculo integral
@@ -417,26 +423,20 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLBasicCalculadoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseEntered
-        //Cuando el mouse este sobre este  recuadro se cambiara el color a [0, 0, 0] en el RGB
-        this.jLBasicCalculadora.setBackground(new java.awt.Color(0, 0, 0));
-        //se muestra la dscripcion correspondiente
-        this.message(1);
+        this.jLBasicCalculadora.setBackground(new java.awt.Color(0, 0, 0)); //Cuando el mouse este sobre este  recuadro se cambiara el color en codigo RGB
+        this.message(1);  //se muestra la dscripcion correspondiente
     }//GEN-LAST:event_jLBasicCalculadoraMouseEntered
 
     private void jLBasicCalculadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseExited
         //Cuando el mouse deje de estar sobre este  recuadro se cambiara el color a [22, 22, 22] en el RGB
         this.jLBasicCalculadora.setBackground(new java.awt.Color(22, 22, 22));
-        
-        //Ademas de esto, volvera a mostrar el mensaje general
-        this.message(0);
+        this.message(0);  //Ademas de esto, volvera a mostrar el mensaje general
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseExited
 
     private void jLBasicCalculadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBasicCalculadoraMouseClicked
-        //Se crea un objeto apartir de la clase JFBasicCalculator
-        JFBasicCalculator basicC = new JFBasicCalculator();
-        basicC.setVisible(true);    //Se hace visible
-        basicC.setLocationRelativeTo(null); //coloca la ventanan en el centro de la pantalla 
+        JFBasicCalculator basicC = new JFBasicCalculator(); //Se crea un objeto apartir de la clase JFBasicCalculator
+        basicC.setVisible(true);  basicC.setLocationRelativeTo(null); //Se hace visible y se coloca la ventanan en el centro de la pantalla 
         this.dispose(); //se cirran todas las ventanas actualles
         
     }//GEN-LAST:event_jLBasicCalculadoraMouseClicked
@@ -446,15 +446,14 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jLExitMouseClicked
 
     private void jLGeometriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseClicked
-        JFCalculatorGeometry geometry = new JFCalculatorGeometry();
-        geometry.setVisible(true);  //muestra la pantalla
-        geometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        JFCalculatorGeometry geometry = new JFCalculatorGeometry();  //Se crea un objeto apartir de la clase
+        geometry.setVisible(true);  geometry.setLocationRelativeTo(null);   //Se hace visible y se coloca la ventanan en el centro de la pantalla 
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLGeometriaMouseClicked
 
     private void jLGeometriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLGeometriaMouseEntered
          this.jLGeometria.setBackground(new java.awt.Color(0, 0, 0));
-         this.message(4);
+         this.message(4);  //se muestra la dscripcion correspondiente
          
     }//GEN-LAST:event_jLGeometriaMouseEntered
 
@@ -464,31 +463,26 @@ public class JFMainPantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jLGeometriaMouseExited
 
     private void jLTrigonometryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseClicked
-        JFCalculatorTrigonometry trigonometry = new JFCalculatorTrigonometry();
-        trigonometry.setVisible(true);
-        trigonometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        JFCalculatorTrigonometry trigonometry = new JFCalculatorTrigonometry();  //Se crea un objeto apartir de la clase
+        trigonometry.setVisible(true); trigonometry.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        
         this.dispose(); //se cirran todas las ventanas actualles
-        
-        
         
     }//GEN-LAST:event_jLTrigonometryMouseClicked
 
     private void jLTrigonometryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseEntered
         this.jLTrigonometry.setBackground(new java.awt.Color(0, 0, 0));
-        
+        this.message(3);   //se muestra la dscripcion correspondiente
     }//GEN-LAST:event_jLTrigonometryMouseEntered
 
     private void jLTrigonometryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLTrigonometryMouseExited
        this.jLTrigonometry.setBackground(new java.awt.Color(22,22,22));
-       
-        //Ademas de esto, volvera a mostrar el mensaje general
-        this.message(0);
+        this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLTrigonometryMouseExited
 
     private void jLCalculoDiferencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseClicked
-        JFCalculoDiferencial calculoD = new JFCalculoDiferencial();
-        calculoD.setVisible(true);
-        calculoD.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
+        JFCalculoDiferencial calculoD = new JFCalculoDiferencial();  //Se crea un objeto apartir de la clase
+        calculoD.setVisible(true);  calculoD.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
     }//GEN-LAST:event_jLCalculoDiferencialMouseClicked
 
@@ -500,13 +494,11 @@ public class JFMainPantalla extends javax.swing.JFrame {
 
     private void jLCalculoDiferencialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoDiferencialMouseExited
         this.jLCalculoDiferencial.setBackground(new java.awt.Color(22,22,22));
-        
-         
         this.message(0); //Ademas de esto, volvera a mostrar el mensaje general
     }//GEN-LAST:event_jLCalculoDiferencialMouseExited
 
     private void jLCalculoIntegralMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculoIntegralMouseClicked
-        JFCalculoIntegral calculoI = new JFCalculoIntegral();
+        JFCalculoIntegral calculoI = new JFCalculoIntegral();  //Se crea un objeto apartir de la clase
         calculoI.setVisible(true);
         calculoI.setLocationRelativeTo(null);   //coloca la ventana emergente exactamente en el centro de la pantalla
         this.dispose(); //se cirran todas las ventanas actualles
