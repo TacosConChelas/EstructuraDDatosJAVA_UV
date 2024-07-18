@@ -39,7 +39,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
                                    +        "\n  diferentes calculadoras que se encuentran recopiladas en el programa, al seleccionarlas aparecera una descripcion de las funcionalidades de cada una de ellas, ademas" 
                                    +        "\n  de describir algunos aspectos importantes con los que podria contar cada, esto para mejorar su uso."
                                    +        "\n \nSi decea conocer el codigo fuente puede consultar el repositorio en el cual se encuentra, ademas de otros proyectos hechos por el mismo creador: "
-                                   +        "\n  https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main";
+                                   +        "\n  https://github.com/TacosConChelas/EstructuraDDatosJAVA_UV/tree/main"; 
                            break;
                   case 1:   //mensaje para la calculadora basica
                            
@@ -87,7 +87,14 @@ public class JFMainPantalla extends javax.swing.JFrame {
                            break;
                   case 8: 
                            //mensaje paral a calculadora de quimica
-                           mensaje = "";
+                           mensaje = "Presentamos nuestra calculadora de química, diseñada para facilitar la resolución de problemas químicos complejos y hacer cálculos precisos en diversas áreas de la " 
+                                    +      "\n  química. Esta herramienta incluye funcionalidades de estequiometría, permitiendo balancear ecuaciones químicas y calcular moles y relaciones molares. En el ámbito " 
+                                    +      "\n  de los gases, utiliza la ley de los gases ideales y las leyes de Boyle, Charles y Avogadro para resolver problemas relacionados con presión, volumen y temperatura. En " 
+                                    +      "\n  soluciones, calcula molaridad, molalidad y realiza diluciones. En termoquímica, determina calor específico, entalpía de reacción y aplica la ley de Hess." 
+                                    +      "\n  \nAdemás, aborda el equilibrio químico con constantes de equilibrio y el principio de Le Chatelier, y en cinética química, calcula la velocidad de reacción y aplica la ley " 
+                                    +      "\n  de Arrhenius. También incluye cálculos de pH y pOH para ácidos y bases, constantes de disociación y soluciones amortiguadoras. Finalmente, en electroquímica, aplica " 
+                                    +      "\n  la ley de Faraday y calcula el potencial de celda utilizando la ecuación de Nernst. Esta calculadora es esencial para estudiantes, profesores y profesionales que " 
+                                    +      "\n  requieren precisión y eficiencia en sus cálculos químicos.";
                            break;
                   case 9: 
                            //mensaje paral a calculadora de
@@ -559,7 +566,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
     private void jLCalculadoraQuimicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseEntered
         // TODO add your handling code here:
         this.jLCalculadoraQuimica.setBackground(new java.awt.Color(0, 0, 0));
-        
+        this.message(8);
     }//GEN-LAST:event_jLCalculadoraQuimicaMouseEntered
 
     private void jLCalculadoraQuimicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCalculadoraQuimicaMouseExited
@@ -603,6 +610,7 @@ public class JFMainPantalla extends javax.swing.JFrame {
         });
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLBasicCalculadora;
