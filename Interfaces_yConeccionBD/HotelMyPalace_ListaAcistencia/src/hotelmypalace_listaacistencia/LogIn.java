@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package elmote_elian;
+package hotelmypalace_listaacistencia;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -14,9 +14,10 @@ import javax.swing.JOptionPane;
  *
  * @author TheOneAboveAll
  */
-public class InicioSesion extends javax.swing.JFrame {
+public class LogIn extends javax.swing.JFrame {
 
-    ConeccionBD conect = new ConeccionBD();
+    
+    Conexion1 conect = new Conexion1();
     Connection con;
     Statement st;
     
@@ -26,7 +27,7 @@ public class InicioSesion extends javax.swing.JFrame {
     /**
      * Creates new form InicioSesion
      */
-    public InicioSesion() {
+    public LogIn() {
         initComponents();
     }
 
@@ -45,7 +46,6 @@ public class InicioSesion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         contrasena = new javax.swing.JTextField();
         ingresar = new javax.swing.JButton();
-        registrarse = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,13 +62,6 @@ public class InicioSesion extends javax.swing.JFrame {
         ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ingresarActionPerformed(evt);
-            }
-        });
-
-        registrarse.setText("Registrarse");
-        registrarse.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registrarseActionPerformed(evt);
             }
         });
 
@@ -94,9 +87,7 @@ public class InicioSesion extends javax.swing.JFrame {
                             .addComponent(jLabel3)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(ingresar)
-                        .addGap(146, 146, 146)
-                        .addComponent(registrarse)))
+                        .addComponent(ingresar)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -113,9 +104,7 @@ public class InicioSesion extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registrarse)
-                    .addComponent(ingresar))
+                .addComponent(ingresar)
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
@@ -132,14 +121,6 @@ public class InicioSesion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarseActionPerformed
-        // TODO add your handling code here:
-        Registro registro = new Registro();
-        registro.setVisible(true);
-        
-        
-    }//GEN-LAST:event_registrarseActionPerformed
 
     private void ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarActionPerformed
        
@@ -200,20 +181,21 @@ public class InicioSesion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InicioSesion().setVisible(true);
+                new LogIn().setVisible(true);
             }
         });
     }
@@ -226,6 +208,5 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton registrarse;
     // End of variables declaration//GEN-END:variables
 }
