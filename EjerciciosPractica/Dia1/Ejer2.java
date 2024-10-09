@@ -1,5 +1,5 @@
 package EjerciciosPractica.Dia1;
-import java.nio.channels.Pipe.SourceChannel;
+
 import java.util.Scanner;
 
 /**
@@ -17,5 +17,6 @@ public class Ejer2 {
         System.out.println("Pero todo terminará cuando sea ingresado un número negativo");
         while (condition) { int num = leer.nextInt();   if (num < 0) {  condition = false;    } else {  suma += num; contador++;}  }
         System.out.println("La suma es: " + suma + "\nEl promedio es: " + (suma / contador));
+        leer.close();
     }
 }
