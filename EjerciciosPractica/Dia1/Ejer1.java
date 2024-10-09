@@ -8,7 +8,11 @@ package EjerciciosPractica.Dia1;
  */
 public class Ejer1 {
     public static void main(String[] args) {
-        for (int i = 0; i < 501; i++) { if ((i % 7 == 0) || (i % 11 == 0) || (i % 77 == 0)) {   System.out.println(i);  }   }
+        for (int i = 0; i < 501; i++) { 
+            if (i % 7 == 0) {       System.out.println("Boom");  
+            } else if (i % 11 == 0) { System.out.println("Bang");  
+            } else if (i % 77 == 0) {   System.out.println("BoomBang");  
+            }
+        }
     }
-    
 }
