@@ -19,7 +19,7 @@ public class Ejer5 {
         boolean salir = true; byte opcion;
         do{
             System.out.println("Selecciona la opçión que decees realizar: \n1) Agregar un nuevo contacto \n2) Elimininar contactos");
-            System.out.println("3) Buscar algun contacto \n4) Salir del sistema");
+            System.out.println("3) Buscar algun contacto \n4) Mostrar todos los contactos \n5) Salir del sistema");
             opcion = leer.nextByte();
             switch (opcion) {
                 case 1:
@@ -33,21 +33,27 @@ public class Ejer5 {
                     listaContactos.add(contacto);
                     break;
                 case 2: 
-                    System.out.println("Escribe el nombre de la persona que deceas eliminar");
+                    System.out.println("Escribe el nombre de la persona que deceas eliminar. DEBES ESCRIBIR EL NOMBRE CORRECTAMENTE");
                     buscarContactoYEliminar(listaContactos, leer.nextLine());
-                    
                     break;
                 case 3: 
+                System.out.println("Escribe el nombre de la persona que deceas buscar");
                     break;
-                case 4: salir = false;
+                case 4: 
+                System.out.println("Estos son todos los contactos en tu lista: ");
+                    mostrarListaDContactos(listaContactos);
+                    break;
+                case 5: salir = false;
                     break;
                 default:
                     break;
             }
         } while(salir);
     }
-    public void mostrarListaDContactos(List<Contacto> listaContacto){
-
+    public static void mostrarListaDContactos(List<Contacto> listaContacto){
+        for (Contacto contacto : listaContacto) {
+            System.out.println(contacto.toString());
+        }
     }
     public static void buscarContactoYEliminar(List<Contacto> listaContacto, String name){
         boolean encontrado = false;
@@ -59,8 +65,16 @@ public class Ejer5 {
         }
         if (encontrado) {   System.out.println("Elemento eliminado");   } else {    System.out.println("Elemento no encontrado");}
     }
-    public void buscarYMostrarContacto(List<Contacto> listaContacto){
-        
+    public void buscarYMostrarContacto(List<Contacto> listaContacto, String name){
+        boolean encontrado = false;
+        for (Contacto contacto : listaContacto) {
+            if (name.equals(contacto.getNameUser())) {
+                encontrado = true;  System.out.println("Contacto encontrado: " + contacto.toString());
+            }
+        }
+        if (! encontrado) {   System.out.println("Elemento no ento no encontrado");   } 
     }
+        
+    
     
 }
