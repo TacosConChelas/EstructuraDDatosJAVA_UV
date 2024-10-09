@@ -23,7 +23,7 @@ public class Ejer4 {
             System.out.println("Ingresa un número dependiendo de tu elección: \n1) Piedra \n");
 
         }
-        System.out.println(random.nextInt((3 - 1) + 1) + 1);
+        // System.out.println(random.nextInt((3 - 1) + 1) + 1);
 
     }
 }
