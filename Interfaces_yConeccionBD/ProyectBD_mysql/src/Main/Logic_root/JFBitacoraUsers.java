@@ -44,7 +44,7 @@ public class JFBitacoraUsers extends javax.swing.JFrame {
     BitacoraUser vitacora = new BitacoraUser();
     
     /**
-     * Creates new form JFShowUsers
+     *  TacosConChelas estubo aquí
      */
     public JFBitacoraUsers() {
         initComponents();
