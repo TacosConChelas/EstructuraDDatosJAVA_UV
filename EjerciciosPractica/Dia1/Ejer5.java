@@ -6,7 +6,6 @@ package EjerciciosPractica.Dia1;
  */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,15 +24,21 @@ public class Ejer5 {
                 case 1:
                     Contacto contacto = new Contacto();
                     System.out.println("Ingresa el nombre del contacto");
-                    contacto.setNameUser(leer.nextLine());
+                    leer.nextLine();
+                    String name = leer.nextLine();
+                    contacto.setNameUser(name);
                     System.out.println("Coloca el número de teléfono del contacto");
                     contacto.setPhoneNumberUser(leer.nextLong(10));
+                
+                    leer.nextLine();
                     System.out.println("Coloca la dirección del contacto");
-                    contacto.setAddressUser(leer.nextLine());
+                    name = leer.nextLine();
+                    contacto.setAddressUser(name);
                     listaContactos.add(contacto);
                     break;
                 case 2: 
                     System.out.println("Escribe el nombre de la persona que deceas eliminar. DEBES ESCRIBIR EL NOMBRE CORRECTAMENTE");
+                    leer.nextLine();
                     buscarContactoYEliminar(listaContactos, leer.nextLine());
                     break;
                 case 3: 
@@ -45,7 +50,7 @@ public class Ejer5 {
                     break;
                 case 5: salir = false;
                     break;
-                default:
+                default: System.out.println("Error en la selección en el menú");
                     break;
             }
         } while(salir);
@@ -71,8 +76,7 @@ public class Ejer5 {
             if (name.equals(contacto.getNameUser())) {
                 encontrado = true;  System.out.println("Contacto encontrado: " + contacto.toString());
             }
-        }
-        if (! encontrado) {   System.out.println("Elemento no ento no encontrado");   } 
+        }   if (! encontrado) {   System.out.println("Elemento no ento no encontrado");   } 
     }
         
     
