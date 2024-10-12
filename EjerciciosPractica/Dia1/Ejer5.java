@@ -62,10 +62,11 @@ public class Ejer5 {
     }
     public static void buscarContactoYEliminar(List<Contacto> listaContacto, String name){
         boolean encontrado = false;
+        int indice;
         for (Contacto contacto : listaContacto) {
             if (name.equals(contacto.getNameUser())) {
-                encontrado = true;
-                listaContacto.remove(contacto);
+                //indice = listaContacto.indexOf(contacto);
+                System.out.println("Se encontro el mismo");
             }
         }
         if (encontrado) {   System.out.println("Elemento eliminado");   } else {    System.out.println("Elemento no encontrado");}
