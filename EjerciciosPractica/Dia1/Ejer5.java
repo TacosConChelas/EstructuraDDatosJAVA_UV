@@ -6,6 +6,7 @@ package EjerciciosPractica.Dia1;
  */
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -63,12 +64,17 @@ public class Ejer5 {
     public static void buscarContactoYEliminar(List<Contacto> listaContacto, String name){
         boolean encontrado = false;
         int indice;
-        for (Contacto contacto : listaContacto) {
+        Iterator<Contacto> iterator = listaContacto.iterator();
+        while (iterator.hasNext()) {
+            Contacto contacto = iterator.next();
             if (name.equals(contacto.getNameUser())) {
-                //indice = listaContacto.indexOf(contacto);
-                System.out.println("Se encontro el mismo");
+                encontrado = true;
+                iterator.remove();  // Usar remove() del iterator
+                break;  // Si sólo quieres eliminar el primer contacto que coincida, puedes salir del bucle aquí
             }
         }
+        
+          
         if (encontrado) {   System.out.println("Elemento eliminado");   } else {    System.out.println("Elemento no encontrado");}
     }
     public void buscarYMostrarContacto(List<Contacto> listaContacto, String name){
