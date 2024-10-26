@@ -38,9 +38,11 @@ public class Ejer5 {
                     listaContactos.add(contacto);
                     break;
                 case 2: 
+                    
                     System.out.println("Escribe el nombre de la persona que deceas eliminar. DEBES ESCRIBIR EL NOMBRE CORRECTAMENTE");
                     leer.nextLine();
-                    buscarContactoYEliminar(listaContactos, leer.nextLine());
+                    String nombre = leer.nextLine();
+                    buscarContactoYEliminar(listaContactos, nombre);
                     break;
                 case 3: 
                 System.out.println("Escribe el nombre de la persona que deceas buscar");
