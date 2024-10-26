@@ -4,19 +4,41 @@
  */
 package proyectocontafinanzas;
 
+import proyectocontafinanzas.Procesos.JFMainMenu;
+
 /**
  *
  * @author TheOneAboveAll
  */
 public class JFLogIn extends javax.swing.JFrame {
+    private int id = 2334;
+    private String pwd = "pato8900";
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
 
     /**
      * Creates new form JFLogIn
      */
     public JFLogIn() {
         initComponents();
+        // basicC.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,27 +48,119 @@ public class JFLogIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTFIdUser = new javax.swing.JTextField();
+        jPFIdUser = new javax.swing.JPasswordField();
+        jBExit = new javax.swing.JButton();
+        Background = new javax.swing.JLabel();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Log");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 220, -1));
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Ingresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 570, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGs/imgLogIn.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 770));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Bienvenido");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 130, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 390));
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Contraseña:");
+        jLabel3.setOpaque(true);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 120, 40));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Inicio de sesión");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 280, -1));
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("ID:");
+        jLabel5.setOpaque(true);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 50, 40));
+
+        jTFIdUser.setBackground(new java.awt.Color(0, 0, 0));
+        jTFIdUser.setForeground(new java.awt.Color(255, 255, 255));
+        jTFIdUser.setOpaque(true);
+        jPanel1.add(jTFIdUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 320, 40));
+
+        jPFIdUser.setBackground(new java.awt.Color(0, 0, 0));
+        jPFIdUser.setForeground(new java.awt.Color(255, 255, 255));
+        jPFIdUser.setOpaque(true);
+        jPanel1.add(jPFIdUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, 320, 40));
+
+        jBExit.setBackground(new java.awt.Color(0, 0, 0));
+        jBExit.setForeground(new java.awt.Color(255, 255, 255));
+        jBExit.setText("Salir");
+        jBExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBExitActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
+
+        Background.setForeground(new java.awt.Color(0, 0, 0));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGs/imgLogIn.jpg"))); // NOI18N
+        Background.setText("Log");
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 770));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         System.exit(0); //Se ejecuta cuando el usuario da clic en el boton de salir
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jBExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExitActionPerformed
+        // TODO add your handling code here:
+        int idUser = Integer.parseInt(this.jTFIdUser.getText());
+        String pwdUser = new String(this.jPFIdUser.getPassword());
+        if ((idUser == this.getId()) && (pwdUser == this.getPwd())){
+            JFMainMenu mainMenu = new JFMainMenu();
+            mainMenu.setVisible(true);
+            mainMenu.setLocationRelativeTo(null);
+            
+            this.dispose(); //se cirran todas las ventanas actualles
+
+        }
+    }//GEN-LAST:event_jBExitActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -83,8 +197,16 @@ public class JFLogIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton jBExit;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPasswordField jPFIdUser;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTFIdUser;
     // End of variables declaration//GEN-END:variables
 }

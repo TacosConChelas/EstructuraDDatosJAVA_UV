@@ -23,6 +23,8 @@ public class JFMainPantalla extends javax.swing.JFrame {
      */
     public JFMainPantalla() {
         initComponents();
+        this.setLocationRelativeTo(null); // coloca la pantalla exactamente en el centro 
+        
         this.jLToday.setText("Date: " + this.date());   //Se muestra en el recuadro la fecha
         this.message(0);    //Se muestra el mensaje general
     }
